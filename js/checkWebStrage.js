@@ -1,16 +1,21 @@
 //webストレージが使用可能かを確認
-if(typeof sessionStorage !== 'undefined'){
-    alert('webストレージを使えます');
-}else{
-    alert('webストレージは使用できません。');
-}
-
+// if(typeof sessionStorage !== 'undefined'){
+//     alert('webストレージを使えます');
+// }else{
+//     alert('webストレージは使用できません。');
+// }
 
 var storage = sessionStorage;
 
 storage.setItem("name","安岡竜太");
 storage.setItem("sex","男");
 storage.setItem("answerCount","50");
+
+$(document).ready(function(){
+    viewStorage();
+});
+
+
 
 //Strageの中身を表として表示
 function viewStorage(){
