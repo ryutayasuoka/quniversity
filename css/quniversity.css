@@ -1,0 +1,12 @@
+#container
+{
+
+}
+
+.content
+{
+    width:90%;
+    margin:auto;
+    height:300px;
+    border:2px solid gray;
+}
