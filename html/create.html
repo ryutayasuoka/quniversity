@@ -21,6 +21,19 @@
         <h2>質問作成</h2>
       </div>
 
+      <p>質問内容</p>
+      <textarea type="text" name="Qcontent" rows="4" cols="20">
+      </textarea>
+
+      <p>選択肢</p>
+      <input type="text" name="select1"></input><br />
+      <input type="text" name="select2"></input><br />
+      <input type="text" name="select3"></input><br />
+      <input type="text" name="select4"></input><br />
+
+      <br /><br />
+      <a id="submit">投稿する</a>
+
       <footer>
       </footer>
 
@@ -32,5 +45,12 @@
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
   <script type="text/javascript" src="../js/webstorage.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        //include footer
+        includeFooter();
 
+        //
+    });
+  </script>
 </html>
