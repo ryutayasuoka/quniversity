@@ -1,10 +1,3 @@
-$(document).ready(function(){
-    viewStorage();
-    includeFooter();
-
-});
-
-
 /***** 関数 *****/
 //include html footer
 function includeFooter(){
