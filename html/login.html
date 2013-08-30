@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewpoint" content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximam-scale=1, user-scalable=no" >
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
 
     <title>Quniversity</title>
   </head>
@@ -22,16 +22,16 @@
       </div>
 
       <p>ニックネーム</p>
-      <input type="text" id="username" placeholder="yasuoka" ></input>
+      <input type="text" id="username" placeholder="りゅーちゃん" ></input>
 
 
       <p>あなたは男子？女子？</p>
       <div class="box">
-        <div >
-          ボタン
+        <div id="male">
+          男子
         </div>
-        <div>
-          ボタン
+        <div id="female">
+          女子
         </div>
       </div>
 
@@ -40,7 +40,6 @@
         <option value="1">後輩</option>
         <option value="2">先輩</option>
         <option value="3">幼馴染</option>
-        <option value="4">セフレ</option>
       </select>
 
       <p id="decide">決定</p>
@@ -56,11 +55,29 @@
 
   <!-- js -->
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
-  <script type="text/javascript" src="../js/webstorage.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
-    $("#decide").click(function(){
-        setFirstUserStatus();
+
+    var storage = localStorage;
+
+    $(document).ready(function(){
+        includeFooter();
+        resetUserStatus();
+
     });
+
+
+
+    $("#male").click(function(){
+        storage.setItem("sex","male");
+    });
+    $("#female").click(function(){
+        storage.setItem("sex","female");
+    });
+
+    $("#decide").click(function(){
+        setFirstUserStatus(storage);
+    });
+
   </script>
 </html>

@@ -2,10 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewpoint" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximam-scale=1, user-scalable=no" >
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
+    <link rel="stylesheet" type="text/css" href="../css/result.css" />
 
     <title>Quniversity</title>
   </head>
@@ -18,10 +19,46 @@
     <!-- begin container -->
     <div id="container">
 
-      <div>
-        <h2>回答結果</h2>
+      <p id="title">回答結果</p>
+
+      <div id="Qcontent">
       </div>
 
+      <p style="margin:14px 0px;">なんて書いてあるかわからん！</p>
+
+      <!---------- begin box ---------->
+      <div class="box">
+        <!-- left box -->
+        <div id="Lbox">
+          <canvas id="pie" height="180" width="180"></canvas>
+
+          <div id="comment">
+            コメントボタン
+          </div>
+
+          <div id="nice-q">
+            NiceQボタン
+          </div>
+
+          <div id="share-twitter">
+            結果をTwitterでシェアする
+          </div>
+
+        </div>
+
+        <!-- rieft box -->
+        <div id="Rbox">
+          <div id="selects">
+            選択肢が入る
+          </div>
+
+          <div id="chara-image">
+            キャラクターが入る
+          </div>
+        </div>
+      </div>
+
+      <!---------- begin comments ---------->
 
       <footer>
       </footer>
@@ -32,6 +69,7 @@
   </body>
 
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
+  <script type="text/javascript" src="../js/lib/Chart.min.js" ></script>
   <script type="text/javascript" src="../js/webstorage.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
@@ -41,6 +79,24 @@
         var storage = localStorage;
         var data = JSON.parse(storage.getItem("question1"));
 
+        $("#Qcontent").val(data[0]);
+
+        var pieData = [
+            {
+                value: 40,
+                color:"#F38630"
+            },
+            {
+                value : 50,
+                color : "#E0E4CC"
+            },
+            {
+                value : 100,
+                color : "#69D2E7"
+            }
+        ];
+
+        var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
 
     });
   </script>
