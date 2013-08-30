@@ -12,13 +12,14 @@
 
   <body>
     <header>
+      <img src="" alt="ロゴが入る">
     </header>
 
     <!-- begin container -->
     <div id="container">
 
       <div>
-        <h2>結果画面</h2>
+        <h2>回答結果</h2>
       </div>
 
 
@@ -33,5 +34,14 @@
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
   <script type="text/javascript" src="../js/webstorage.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        includeFooter();
 
+        var storage = localStorage;
+        var data = JSON.parse(storage.getItem("question1"));
+
+
+    });
+  </script>
 </html>
