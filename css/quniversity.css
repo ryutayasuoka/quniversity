@@ -32,11 +32,24 @@ footer
     text-align:center;
     line-height:30px;
     vertical-align:middle;
+
 }
 .footer-menu
 {
+    display:box; /*追記*/
+    display:-moz-box;
+    display:-webkit-box;
     margin:0;
     padding:0;
     width:106px;
     background-color:#8b4513;
+}
+/*aaaaaaadddddddddddd*/
+.page-header{
+    display: box;
+    width:100%;
+    text-align: center;
+    position: center;
+    background-color:#8b4513;
+    color: white;
 }

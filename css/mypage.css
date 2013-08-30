@@ -1,0 +1,35 @@
+#create{
+    margin-left:80px;
+}
+.bro{
+	display: block;
+	background-color: #f8dce0;
+}
+#bro1{
+	display: block;
+	background-color:red;
+	width: 100px;
+	padding: 10px;
+	height: 80px;
+}.bro #bro2{
+	display:block;
+	background-color:yellow;
+	width: 100px;
+	padding: 10px;
+	height: 80px;
+}.bro #bro3{
+	display:block;
+	background-color:green;
+	width: 100px;
+	padding: 10px;
+	height: 80px;
+}.bro #bro4{
+	display:block;
+	background-color:navy;
+	width: 100px;
+	padding: 10px;
+	height: 80px;
+}
+.columnline{
+
+}
