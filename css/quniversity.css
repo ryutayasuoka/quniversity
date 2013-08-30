@@ -1,8 +1,9 @@
 /******  共通のcssを設定　**********/
 .box
 {
-    display: -webkit-box; /* Safari,Google Chrome */
-    display: -moz-box; /* Firefox */
+    display: box;
+    display: -webkit-box;  /* Safari,Google Chrome */
+    display: -moz-box;  /* Firefox */
 }
 
 #container
@@ -29,7 +30,18 @@ footer
 }
 .footer-menu
 {
-    width:33%;
-    height:100px;
-    background-color:gray;
+    display:box; /*追記*/
+    display:-moz-box;
+    display:-webkit-box;
+    width:30%;
+    height:60px;
+    background-color:#8b4513;
+}
+
+/*追記部分*/
+#create{
+    margin-left: 20px;
+}
+.columnline{
+
 }

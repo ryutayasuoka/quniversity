@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewpoint" content="width=device-width, initial-scale=1" />
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--     <meta name="viewpoint" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximam-scale=1, user-scalable=no" >
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
 
@@ -11,6 +11,8 @@
   </head>
 
   <body>
+
+
     <header>
     </header>
 
@@ -33,13 +35,20 @@
 
       <div class="content">
         <p>ページ移動</p>
-        <a href="login.html">ログインページ</a>
-        <a href="status.html">ステータス</a>
-        <a href="settings.html" >設定</a>
-        <a href="create.html" >質問作成</a>
-        <a href="myQlist.html" >今までの質問</a>
-      </div>
+        <a href="login.html">ログインページ</a> <br>
+        <div class=box>
+            <div class="box">
+                <a href="myQlist.html" >今までの質問</a>
+                <a href="create.html" id="create" >質問作成</a>
+
+            <div class="box">
+                <a href="status.html">ステータス</a>
+                <div id="boxline"><a href="index.html" >マイページ</a><br></div>
+                <div id="boxline"><a href="settings.html" >設定</a><br></div>
+            </div>
+        </div>
     </div>
+    <div class="clear"></div>
     <!-- end container -->
 
     <footer>
@@ -50,10 +59,12 @@
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
   <script type="text/javascript" src="../js/webstorage.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
+  <div>
   <script type="text/javascript">
     $(document).ready(function(){
         viewStorage();
         includeFooter();
     });
   </script>
+  </div>
 </html>
