@@ -1,0 +1,42 @@
+#title
+{
+    font-size:20px;
+    font-weight:bold;
+}
+
+#Qcontent
+{
+    width:95%;
+    margin:20px auto 0px;
+}
+
+/* left box */
+#Lbox
+{
+    width:180px;
+}
+
+#comment
+{
+    width:180px;
+    background-color:yellow;
+    margin-top:28px;
+}
+#nice-q
+{
+    width:180px;
+    background-color:gray;
+    margin-top:36px;
+}
+#share-twitter
+{
+    width:180px;
+    background-color:blue;
+    margin-top:20px;
+}
+/* right box */
+#Rbox
+{
+    margin-left:26px;
+    width:114px;
+}

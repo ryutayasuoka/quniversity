@@ -1,0 +1,57 @@
+#title
+{
+    width:320px;
+    height:50px;
+    background-color:gray;
+    margin:10px auto 0px;
+    text-align:center;
+    line-height:50px;
+    vertical-align:middle;
+    font-size:20px;
+    font-weight:bold;
+}
+
+textarea
+{
+    margin:28px 10px 0;
+    width:320px;
+    height:100px;
+}
+
+#selects
+{
+    margin:28px 0 0 27px;
+    width:238px;
+}
+
+#selects input
+{
+    margin:0;
+    height:26px;
+    width:238px;
+}
+
+#comment
+{
+    margin:18px 0 0 27px;
+    width:180px;
+    background-color:yellow;
+}
+
+#category
+{
+    margin:14px 0 0 27px;
+    width:180px;
+    background-color:yellow;
+}
+
+#submit
+{
+    width:150px;
+    height:25px;
+    background-color:blue;
+    margin:18px auto 0;
+    text-align:center;
+    line-height:25px;
+    vertical-align:middle;
+}
