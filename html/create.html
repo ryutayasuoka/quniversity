@@ -24,7 +24,7 @@
       <p>質問内容</p>
       <textarea type="text" name="Qcontent" rows="4" cols="20"></textarea>
 
-      <p>選択肢</p>
+      <p>選択肢(最大４つ、１５文字)</p>
       <input type="text" name="select"></input><br />
       <input type="text" name="select"></input><br />
       <input type="text" name="select"></input><br />
@@ -63,16 +63,42 @@
             return ;
         }
         array.push(qContent);
-
+        array.push("0"); //NiceQcount
         //check Qselect
         var selects = $("[name=select]");
-        for(var i=0; i<selects.length; i++){
-            alert(selects[i].value.length);
-            //error or none text
-            if(selects[i].value == ""){ continue;}
 
+        var select;
+        var selectNum = 1;
+        for(var i=0; i<selects.length; i++){
+            //alert(typeof selects[i].value);
+            select = selects[i].value;
+            //error or none text
+            if(select == ""){
+                continue;
+            }else if(!checkLength(select,1,15)){
+                alert("選択肢がエラーだわっしょい");
+                return ;
+            }
+            array.push(select);
+            selectNum++;
+        }
+        // error
+        if(selectNum == 1){
+            alert("選択肢が１つもありません。");
+            return ;
         }
 
+        // insert "その他"
+        array.push("その他");
+        // insert each select count
+        for(var i=0; i<selectNum; i++){
+            array.push("0");
+        }
+
+        var storage = localStorage;
+        storage.setItem("question1",JSON.stringify(array));
+
+        location.href = "index.html";
     });
 
   </script>
