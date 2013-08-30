@@ -1,4 +1,9 @@
 /******  共通のcssを設定　**********/
+.body
+{
+    margin:0;
+    padding:0;
+}
 .box
 {
     display: box;
@@ -8,40 +13,30 @@
 
 #container
 {
-    width:100%;
+    width:320px;
 }
 
 .content
 {
     width:90%;
     margin:auto;
-    height:500px;
-    border:2px solid gray;
 }
 
 /***  フッター　****/
 footer
 {
-    width:100%;
+    width:320px;
+    margin:0;
+    padding:0;
+    height:30px;
     text-align:center;
-    position:fixed;
-    position:absolute;
-    bottom:0;
+    line-height:30px;
+    vertical-align:middle;
 }
 .footer-menu
 {
-    display:box; /*追記*/
-    display:-moz-box;
-    display:-webkit-box;
-    width:30%;
-    height:60px;
+    margin:0;
+    padding:0;
+    width:106px;
     background-color:#8b4513;
-}
-
-/*追記部分*/
-#create{
-    margin-left: 20px;
-}
-.columnline{
-
 }
