@@ -15,11 +15,28 @@
 
     <header>
       <img id="back-btn" src="../images/create_back.png" />
-      <img id="title" src="../images/create_htitle.png" />
+      <img id="title" src="../images/answer/answer_title.png" />
     </header>
 
     <!-- begin container -->
     <div id="container">
+
+      <div id="question">
+        <div id="q-user">
+          おとなちゃれんじさんからの質問
+        </div>
+        <div id="q-content">
+        </div>
+      </div>
+
+
+
+      <div id="submit">
+      </div>
+
+      <div id="human-image">
+      </div>
+
 
     </div>
     <!-- end container -->
@@ -40,8 +57,12 @@
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
   <script type="text/javascript" src="../js/quniversity.js" ></script>
   <script type="text/javascript">
+    var storage = localStorage;
+
     $(document).ready(function(){
         hiddenAddressbar();
+
+        $("#q-content").append(JSON.parse(storage.getItem("q5"))[0]);
     });
   </script>
 </html>

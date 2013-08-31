@@ -9,28 +9,33 @@ header #back-btn
 
 header #title
 {
-    width:81px;
+    width:79px;
     height:19px;
     position:relative;
     top:4px;
     left:60px;
 }
 
-
-#textarea
-{
-    margin:28px 10px 0;
-    width:296px;
-    height:133px;
-}
-
-textarea
+#question
 {
     width:296px;
     height:133px;
-    background-image:url("../images/create_qbox.png");
+    background-image:url("../images/answer/answer_qbox.png");
     background-size:100% 100%;
-    border:none;
+    margin:0 auto;
+}
+#q-user
+{
+    margin:7px 0 0 7px;
+    color:white;
+}
+#q-content
+{
+    width:275px;
+    height:70px;
+    margin:0 0 0 10px;
+    color:white;
+    background-color:red;
     font-size:18px;
 }
 
@@ -75,55 +80,26 @@ textarea
     position:relative;
     top:-62px;
 }
-#comment
-{
-    width:238px;
-    margin:0px auto 0;
-    position:relative;
-    top:-20px;;
-}
-
-#comment-image
-{
-    width:160px;
-    height:23px;
-    position:relative;
-    top:0px;
-    left:0px;
-}
-
-#check
-{
-    width:34px;
-    height:33px;
-    position:relative;
-    top:0px;
-    left:-170px;
-}
-
-#category
-{
-    margin:14px auto 0;
-    width:238px;
-    position:relative;
-    top:-20px;;
-}
-#category select
-{
-    width:120px;
-    height:30px;
-    font-size:18px;
-}
 
 #submit
 {
     width:102px;
     height:34px;
-    background-image:url("../images/create_button.png");
+    background-image:url("../images/answer/answer_button.png");
     background-size:100% 100%;
     position:center;
     position:relative;
-    top:-7px;
-
-    margin:18px auto;
+    top:0px;
+    margin:18px auto 0;
+}
+#human-image
+{
+    width:250px;
+    height:87px;
+    background-image:url("../images/answer/answer_boy.png");
+    background-size:100% 100%;
+    position:center;
+    position:relative;
+    top:0px;
+    margin:0 auto;
 }
