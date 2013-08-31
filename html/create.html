@@ -12,27 +12,30 @@
   </head>
 
   <body>
-    <header>
-    </header>
-
     <!-- begin container -->
     <div id="container">
+
+      <header>
+      </header>
+
 
       <div id="title">
         質問する
       </div>
 
-      <textarea type="text" name="Qcontent" placeholder="ここに質問を入力してね(最大８０文字)"></textarea>
+      <div id="textarea">
+        <textarea type="text" name="Qcontent" placeholder="ここに質問を入力してね(最大５０文字)"></textarea>
+      </div>
 
       <div id="selects">
-        <input type="text" name="select" placeholder="選択肢を入力"></input><br />
-        <input type="text" name="select" placeholder="15文字以上打ったら殺す"></input><br />
+        <input type="text" name="select" placeholder="例：サッカー部"></input><br />
+        <input type="text" name="select" placeholder="10文字以内にしてね！"></input><br />
         <input type="text" name="select"></input><br />
         <input type="text" name="select"></input><br />
       </div>
 
       <div id="comment">
-        コメントをもらう
+        <img src="../images/hoge.png" id="comment-image" />
       </div>
 
       <div id="category">
@@ -66,6 +69,11 @@
         includeFooter();
     });
 
+    //need or not comment.
+    $("#comment-image").click(function(){
+
+    });
+
     //submit question
     $("#submit").click(function(){
 
@@ -75,7 +83,7 @@
         //check Qcontent
         var qContent = $("[name=Qcontent]").val();
         if(!checkLength(qContent,1,80) ){
-            alert("質問内容がエラーだわっしょい");
+            alert("質問内容が入ってないわーーーー！！！");
             return ;
         }
         array.push(qContent);

@@ -86,20 +86,7 @@
         var sex = data[1];
         var category = data[2];
 
-        var pieData = [
-            {
-                value: 20,
-                color:"#F38630"
-            },
-            {
-                value : 50,
-                color : "#E0E4CC"
-            },
-            {
-                value : 100,
-                color : "#69D2E7"
-            }
-        ];
+        calcSelectsNum(data);
 
         var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
 

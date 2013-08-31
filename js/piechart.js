@@ -1,4 +1,4 @@
-//canvasで頑張って円グラフを作成する
+//draw pie chart with canvas
 
 $(document).ready(function(){
 
@@ -6,18 +6,13 @@ $(document).ready(function(){
     var can = $("#pie")[0].getContext("2d");
     can.beginPath();
 
-    var timer = 0;
-    //pieAnimation();
 });
 
-function pieAnimation(tilt,can){
-    tilt++;
+function pieAnimation(datas,can){
 
-    can.clearRect(0,0,200,200);
+    var tilt;
+
     drawFan(100,100,100,tilt,30,"rgb(0,0,255)","rgb(0,255,0)",can);
-
-    clearTImeout(timer);
-    timer = setRimeout(pieAnimation,100);
 }
 
 function drawFan(x,y,radius,tilt,angle,strokeColor,fillColor,target){
