@@ -15,7 +15,7 @@
 
     <header>
       <img id="back-btn" src="../images/create_back.png" />
-      <img id="title" src="../images/create_htitle.png" />
+      <img id="title" src="../images/mypage_title.png" />
     </header>
 
     <!-- begin container -->
@@ -33,24 +33,80 @@
         </div>
       </div>
 
+      <div id="new-q" class="box" >
+        <div id="newq-img1">
+          <img src="../images/mypage_icon2.png" />
+        </div>
+        <div id="new-q-content">
+        </div>
+        <div id="newq-img2">
+          <img src="../images/mypage_zyoshi.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <div id="content-left">
+          <div id="create">
+            <a href="create.html" >
+              <img src="../images/mypage_qbutton.png" />
+            </a>
+          </div>
+          <div id="my-q-list">
+            <a href="myQlist.html">
+              <img src="../images/mypage_imamadeno.png" />
+            </a>
+          </div>
+          <div id="kokuban">
+            <img src="../images/mypage_kokuban.png" />
+          </div>
+        </div>
+
+        <div id="content-right">
+          <img src="../images/mypage_status.png" id="status" />
+        </div>
+      </div>
     </div>
     <!-- end container -->
 
-    <footer>
+    <footer class="box">
+      <div class="footer-menu">
+        <a href="index.html">マイページ</a>
+      </div>
+      <div class="footer-menu" style="width:108px;">
+        <a href="Qlist.html">皆の質問</a>
+      </div>
+      <div class="footer-menu">
+        <a href="settings.html">設定</a>
+      </div>
     </footer>
 
-
+    <div id="status-page">
+      <div id="status-background">
+      </div>
+    </div>
   </body>
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
+    var storage = localStorage;
     $(document).ready(function(){
-        includeFooter();
-
-        var storage = localStorage;
-
+        //includeFooter();
+        hiddenAddressbar();
         $("#username").append(storage.getItem("username"));
-
+        $("#new-q-content").append(JSON.parse(storage.getItem("q1"))[0]);
     });
+    $("#new-q").click(function(){
+        location.href = "result.html?q1";
+    });
+
+    //generate status page
+    $("#status").click(function(){
+        viewStatus(storage);
+    });
+    //remove status page
+    $("#status-page").click(function(){
+        removeStatus();
+    });
+
   </script>
 </html>

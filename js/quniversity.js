@@ -1,8 +1,24 @@
 /***** 関数 *****/
+
+//hidden address bar
+function hiddenAddressbar(){
+    setTimeout(scrollTo, 100, 0, 1);
+    return ;
+}
+
 //include html footer
 function includeFooter(){
     $("footer").attr("class","box").html('<div class="footer-menu"><a href="index.html">マイページ</a></div><div class="footer-menu" style="width:108px;"><a href="Qlist.html">皆の質問</a></div><div class="footer-menu"><a href="settings.html">設定</a></div>');
     return ;
+}
+
+//view status page
+function viewStatus(storage){
+    $("#status-page").show("slow");
+}
+
+function removeStatus(){
+    $("#status-page").hide("slow");
 }
 
 /**************** function retated to Storage. ****************/
