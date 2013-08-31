@@ -2,51 +2,46 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" >
-
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Quniversity</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
+    <link rel="stylesheet" type="text/css" href="../css/select.css" />
+
   </head>
 
   <body>
+
     <header>
+      <img id="back-btn" src="../images/create_back.png" />
+      <img id="title" src="../images/create_htitle.png" />
     </header>
 
     <!-- begin container -->
     <div id="container">
 
-      <div>
-        <h2>色々テスト</h2>
-      </div>
-
-      <div>
-        <table border="1">
-          <tr>
-            <th>キー</th><th>値</th>
-          </tr>
-          <tbody id="list">
-          </tbody>
-        </table>
-      </div>
-
-      <div class="content">
-        <p>スワイプの練習</p>
-        <p>１ページ目</p>
-        <a href="page2.html" >２ページ目</a>
-        <a href="page3.html" >３ページ目</a>
-      </div>
-
-      <footer>
-        フッターでっせ
-      </footer>
-
     </div>
     <!-- end container -->
 
+    <footer class="box">
+      <div class="footer-menu">
+        <a href="index.html">マイページ</a>
+      </div>
+      <div class="footer-menu" style="width:108px;">
+        <a href="Qlist.html">皆の質問</a>
+      </div>
+      <div class="footer-menu">
+        <a href="settings.html">設定</a>
+      </div>
+    </footer>
+
   </body>
-    <script type="text/javascript" src="../js/lib/jquery.js" ></script>
-    <script type="text/javascript" src="../js/quniversity.js" ></script>
-
-
+  <script type="text/javascript" src="../js/lib/jquery.js" ></script>
+  <script type="text/javascript" src="../js/quniversity.js" ></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        hiddenAddressbar();
+    });
+  </script>
 </html>

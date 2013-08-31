@@ -82,6 +82,21 @@
 
     <div id="status-page">
       <div id="status-background">
+        <div id="parameter">
+          <p>質問回数 <span>5</span> 回</p>
+          <p>回答回数 <span>12</span> 回</p>
+          <p>NiceQ <span>8</span> 回</p>
+          <p>好感度 <span>72</span> ％</p>
+        </div>
+        <div id="status-girl">
+        </div>
+        <div id="status-comment">
+          <div>
+            先輩っていいとこあるんですね！
+          </div>
+        </div>
+        <div id="status-heart">
+        </div>
       </div>
     </div>
   </body>
@@ -96,12 +111,13 @@
         $("#new-q-content").append(JSON.parse(storage.getItem("q1"))[0]);
     });
     $("#new-q").click(function(){
-        location.href = "result.html?q1";
+        location.href = "select.html?q1";
     });
 
     //generate status page
     $("#status").click(function(){
         viewStatus(storage);
+        // for(var i=0; )
     });
     //remove status page
     $("#status-page").click(function(){
