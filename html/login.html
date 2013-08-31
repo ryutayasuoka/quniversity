@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximam-scale=1, user-scalable=no" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" >
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
     <link rel="stylesheet" type="text/css" href="../css/login.css" />
@@ -61,9 +61,7 @@
     var storage = localStorage;
 
     $(document).ready(function(){
-        includeFooter();
-        resetUserStatus();
-
+        resetUserStatus(storage);
     });
 
 
@@ -76,6 +74,8 @@
     });
 
     $("#decide").click(function(){
+
+        setQuestions(storage);
         setFirstUserStatus(storage);
     });
 

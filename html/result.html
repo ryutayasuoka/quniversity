@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximam-scale=1, user-scalable=no" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" >
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
@@ -70,20 +70,25 @@
 
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
   <script type="text/javascript" src="../js/lib/Chart.min.js" ></script>
-  <script type="text/javascript" src="../js/webstorage.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
         includeFooter();
 
-        var storage = localStorage;
-        var data = JSON.parse(storage.getItem("question1"));
+        var questionId = getRequest();
 
-        $("#Qcontent").val(data[0]);
+        var storage = localStorage;
+        //data = [content,sex,category,selects,selectsCount,niceq]
+        var data = JSON.parse(storage.getItem(questionId));
+
+        //insert Qcontent
+        $("#Qcontent").append(data[0]);
+        var sex = data[1];
+        var category = data[2];
 
         var pieData = [
             {
-                value: 40,
+                value: 20,
                 color:"#F38630"
             },
             {

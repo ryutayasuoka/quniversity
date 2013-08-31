@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewpoint" content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" >
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
+    <link rel="stylesheet" type="text/css" href="../css/Qlist.css" />
 
     <title>Quniversity</title>
   </head>
@@ -18,7 +18,10 @@
     <div id="container">
 
       <div>
-        <h2>皆の質問</h2>
+        皆の質問
+      </div>
+
+      <div id="qlist">
       </div>
 
       <footer>
@@ -30,7 +33,18 @@
   </body>
 
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
-  <script type="text/javascript" src="../js/webstorage.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
+  <script type="text/javascript">
+
+    var storage = localStorage;
+
+    $(document).ready(function(){
+        includeFooter();
+
+        insertQuestions(storage);
+    });
+
+
+  </script>
 
 </html>

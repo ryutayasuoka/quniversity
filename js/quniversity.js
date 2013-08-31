@@ -5,15 +5,6 @@ function includeFooter(){
     return ;
 }
 
-//count total number of selects
-// function countSelects(data){
-//     switch(data.length){
-//         case
-
-//     }
-
-// }
-
 /**************** function retated to Storage. ****************/
 function resetUserStatus(storage){
 
@@ -24,18 +15,6 @@ function resetUserStatus(storage){
 
     return ;
 }
-
-// function setQuestions(storage){
-
-//         var QcontentArray = new Array(
-//             "野球部とサッカー部どちらが好きですか？",
-//             "キュロットスカートって男子からしたらどうなんですか？？",
-//             "女の子って何でお互いを「可愛い」っていうの？",
-//             "俺、女の子とふたりきりのとき沈黙が好きなんだけど、女の子もそうかなあ？",
-//         );
-
-//     return ;
-// }
 
 function setFirstUserStatus(storage){
 
@@ -73,6 +52,14 @@ function checkLength(value,minLength,maxLength){
     return true;
 }
 
+function getRequest(){
+
+    if(location.search.length < 1){ return false;}
+
+    return location.search.substr(1);
+}
+
+
 //Strageの中身を表として表示
 function viewStorage(){
 
@@ -99,4 +86,36 @@ function viewStorage(){
         td1.innerHTML = _key;
         td2.innerHTML = storage.getItem(_key);
     }
+}
+
+
+/* set some example questions*/
+function setQuestions(storage){
+
+    var Q1 = new Array("野球部とサッカー部どちらが好きですか？","male","4","はい","いいえ","その他","33","45","10","10");
+    var Q2 = new Array("キュロットスカートって男子からしたらどうなんですか？","female","3","許せない","がっかり","逆にそそる","その他","300","100","35","6","30");
+    var Q3 = new Array("女の子って何でお互いを「可愛い」ってゆうの？","female","5","可愛いと思ってない","ホントに思ってる","その他","67","23","19","45");
+    var Q4 = new Array("俺、女の子と２人きりの時沈黙が好きなんだけど、女の子もそうかなあ？","male","4","はい","いいえ","論外","その他","3","30","68","2","5");
+    var Q5 = new Array("どこからが浮気ですか？","male","5","食事","バー","キス","YesComeon!","その他","3","10","56","32","5","89");
+
+    storage.setItem("q1",JSON.stringify(Q1));
+    storage.setItem("q2",JSON.stringify(Q2));
+    storage.setItem("q3",JSON.stringify(Q3));
+    storage.setItem("q4",JSON.stringify(Q4));
+    storage.setItem("q5",JSON.stringify(Q5));
+
+    return ;
+}
+
+function insertQuestions(storage){
+
+    var qlist = $("#qlist");
+
+    for(var i=1; i<6; i++){
+
+        var _data = JSON.parse(storage.getItem("q"+i) );
+        qlist.append('<div><a href="result.html?q'+i+'"><div class="'+_data[1]+'">'+_data[0]+'</div></a></div>');
+    }
+
+    return;
 }

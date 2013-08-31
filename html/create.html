@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximam-scale=1, user-scalable=no" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" >
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
@@ -81,8 +81,7 @@
         array.push(qContent);
 
         array.push(storage.getItem("sex")); //insert sex
-        //array.push($("[name=category]").val()); // insert category
-        array.push("0"); //insert NiceQcount
+        array.push($("[name=category]").val()); // insert category
 
         //check Qselect
         var selects = $("[name=select]");
@@ -115,7 +114,11 @@
             array.push("0");
         }
 
+        array.push("0"); //insert NiceQcount
+
         var storage = localStorage;
+
+        storage.removeItem("question1");
         storage.setItem("question1",JSON.stringify(array));
 
         location.href = "result.html";
