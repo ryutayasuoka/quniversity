@@ -17,14 +17,6 @@ header #title
 }
 
 
-#container
-{
-    width:320px;
-    height:auto;
-    background-image:url("../images/kokuban.png");
-    background-size:100% 100%;
-}
-
 #textarea
 {
     margin:28px 10px 0;

@@ -1,0 +1,44 @@
+header #back-btn
+{
+    width:50px;
+    height:26px;
+    position:relative;
+    top:7px;
+    left:15px;
+}
+
+header #title
+{
+    width:81px;
+    height:19px;
+    position:relative;
+    top:0px;
+    left:60px;
+}
+
+#profile
+{
+    width:280px;
+    margin:15px auto 0;
+}
+#user
+{
+    width:200px;
+}
+#user img
+{
+    width:25px;
+    height:25px;
+}
+#user span
+{
+    margin-left:20px;
+    font-size:16px;
+    position:relative;
+    top:-5px;
+}
+#profile #settings img
+{
+    width:60px;
+    height:30px;
+}

@@ -1,15 +1,7 @@
-//draw pie chart with canvas
+/* create pie chart */
 
-$(document).ready(function(){
-
-    //generate canvas 2d object.
-    var can = $("#pie")[0].getContext("2d");
-    can.beginPath();
-
-});
-
-//create pie chart
 function createPieChart(data,can){
+    alert("tukuruyo!!");
 
     var tilt;
 

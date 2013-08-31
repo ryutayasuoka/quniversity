@@ -1,7 +1,7 @@
 /***** 関数 *****/
 //include html footer
 function includeFooter(){
-    $("footer").attr("class","box").html('<div class="footer-menu"><a href="index.html">Myページ</a></div><div class="footer-menu" style="width:108px;"><a href="Qlist.html">皆の質問</a></div><div class="footer-menu"><a href="settings.html">設定</a></div>');
+    $("footer").attr("class","box").html('<div class="footer-menu"><a href="index.html">マイページ</a></div><div class="footer-menu" style="width:108px;"><a href="Qlist.html">皆の質問</a></div><div class="footer-menu"><a href="settings.html">設定</a></div>');
     return ;
 }
 

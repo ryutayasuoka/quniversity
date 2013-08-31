@@ -69,7 +69,7 @@
   </body>
 
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
-  <script type="text/javascript" src="../js/lib/Chart.min.js" ></script>
+  <script type="text/javascript" src="../js/piechart.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
@@ -101,12 +101,11 @@
             selectNumArray.push(data[i+5+selectNum]);
         }
 
-        for(var i=0; i<selectArray.length; i++){
-            alert(selectArray[i]);
-        }
-        for(var i=0; i<selectNumArray.length; i++){
-            alert(selectNumArray[i]);
-        }
+
+        //generate canvas 2d object.
+        var can = $("#pie")[0].getContext("2d");
+        can.beginPath();
+        createPieChart(selectNumArray,can);
 
         return ;
     });
