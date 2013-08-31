@@ -17,13 +17,8 @@
     <!-- begin container -->
     <div id="container">
 
-      <div>
-        <h2>ログイン</h2>
-      </div>
-
       <p>ニックネーム</p>
       <input type="text" id="username" placeholder="りゅーちゃん" ></input>
-
 
       <p>あなたは男子？女子？</p>
       <div class="box">
@@ -44,12 +39,20 @@
 
       <p id="decide">決定</p>
 
-
-      <footer>
-      </footer>
-
     </div>
     <!-- end container -->
+
+    <footer class="box">
+      <div class="footer-menu">
+        <a href="index.html">マイページ</a>
+      </div>
+      <div class="footer-menu" style="width:108px;">
+        <a href="Qlist.html">皆の質問</a>
+      </div>
+      <div class="footer-menu">
+        <a href="settings.html">設定</a>
+      </div>
+    </footer>
 
   </body>
 
@@ -58,13 +61,11 @@
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
 
-    var storage = localStorage;
+  var storage = localStorage;
 
     $(document).ready(function(){
         resetUserStatus(storage);
     });
-
-
 
     $("#male").click(function(){
         storage.setItem("sex","male");
