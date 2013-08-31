@@ -86,7 +86,9 @@ textarea
 #comment
 {
     width:238px;
-    margin:18px auto 0;
+    margin:0px auto 0;
+    position:relative;
+    top:-20px;;
 }
 
 #comment-image
@@ -111,6 +113,8 @@ textarea
 {
     margin:14px auto 0;
     width:238px;
+    position:relative;
+    top:-20px;;
 }
 #category select
 {
@@ -126,5 +130,8 @@ textarea
     background-image:url("../images/create_button.png");
     background-size:100% 100%;
     position:center;
+    position:relative;
+    top:-7px;
+
     margin:18px auto;
 }

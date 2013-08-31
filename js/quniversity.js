@@ -92,11 +92,11 @@ function viewStorage(){
 /* set some example questions*/
 function setQuestions(storage){
 
-    var Q1 = new Array("野球部とサッカー部どちらが好きですか？","male","4","no","はい","いいえ","その他","33","45","10","10");
-    var Q2 = new Array("キュロットスカートって男子からしたらどうなんですか？","female","3","no","許せない","がっかり","逆にそそる","その他","300","100","35","6","30");
-    var Q3 = new Array("女の子って何でお互いを「可愛い」ってゆうの？","female","5","yes","可愛いと思ってない","ホントに思ってる","その他","67","23","19","45");
-    var Q4 = new Array("俺、女の子と２人きりの時沈黙が好きなんだけど、女の子もそうかなあ？","male","4","yes","はい","いいえ","論外","その他","3","30","68","2","5");
-    var Q5 = new Array("どこからが浮気ですか？","male","5","yes","食事","バー","キス","YesComeon!","その他","3","10","56","32","5","89");
+    var Q1 = new Array("野球部とサッカー部どちらが好きですか？","male","4","no","10","はい","いいえ","その他","33","45","10");
+    var Q2 = new Array("キュロットスカートって男子からしたらどうなんですか？","female","3","no","30","許せない","がっかり","逆にそそる","その他","300","100","35","6","30");
+    var Q3 = new Array("女の子って何でお互いを「可愛い」ってゆうの？","female","5","yes","45","可愛いと思ってない","ホントに思ってる","その他","67","23","19");
+    var Q4 = new Array("俺、女の子と２人きりの時沈黙が好きなんだけど、女の子もそうかなあ？","male","4","yes","5","はい","いいえ","論外","その他","3","30","68","2");
+    var Q5 = new Array("どこからが浮気ですか？","male","5","yes","89","食事","バー","キス","YesComeon!","その他","3","10","56","32","5");
 
     storage.setItem("q1",JSON.stringify(Q1));
     storage.setItem("q2",JSON.stringify(Q2));
@@ -121,11 +121,19 @@ function insertQuestions(storage){
 }
 
 function calcSelectsNum(data){
-    var num = 0;
     switch(data.length){
-    case 3:
+    case 9:
+        return 2;
         break;
-
+    case 11:
+        return 3;
+        break;
+    case 13:
+        return 4;
+        break;
+    case 15:
+        return 5;
+        break;
     }
-    return num;
+    return false;
 }

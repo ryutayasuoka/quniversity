@@ -96,6 +96,8 @@
         array.push(storage.getItem("sex")); //insert sex
         array.push($("[name=category]").val()); // insert category
         array.push($("#comment").attr("value")); // insert need comment
+        array.push("0"); //insert NiceQcount
+
 
         //check Qselect
         var selects = $("[name=select]");
@@ -127,14 +129,10 @@
             array.push("0");
         }
 
-        array.push("0"); //insert NiceQcount
-
         var storage = localStorage;
-
         storage.removeItem("question1");
-        storage.setItem("question1",JSON.stringify(array));
-
-        location.href = "result.html";
+        storage.setItem("cq",JSON.stringify(array));
+        location.href = "result.html?cq";
     });
 
   </script>

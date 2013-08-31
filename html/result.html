@@ -78,18 +78,37 @@
         var questionId = getRequest();
 
         var storage = localStorage;
-        //data = [content,sex,category,selects,selectsCount,niceq]
+        //data = [content,sex,category,commentBool,selects,selectsCount,niceq]
         var data = JSON.parse(storage.getItem(questionId));
 
         //insert Qcontent
         $("#Qcontent").append(data[0]);
         var sex = data[1];
         var category = data[2];
+        var commentBool = data[3];
+        var niceQcount = data[4];
 
-        calcSelectsNum(data);
+        var selectNum = calcSelectsNum(data);
 
-        var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+        //insert selects
+        var selectArray = new Array();
+        for(var i=0; i<selectNum; i++){
+            selectArray.push(data[i+5]);
+        }
+        //insert selects number
+        var selectNumArray = new Array();
+        for(var i=0; i<selectNum; i++){
+            selectNumArray.push(data[i+5+selectNum]);
+        }
 
+        for(var i=0; i<selectArray.length; i++){
+            alert(selectArray[i]);
+        }
+        for(var i=0; i<selectNumArray.length; i++){
+            alert(selectNumArray[i]);
+        }
+
+        return ;
     });
   </script>
 </html>
