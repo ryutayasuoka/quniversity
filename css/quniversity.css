@@ -17,32 +17,27 @@ body
 }
 
 /***  ヘッダー　****/
-/*aaaaaaadddddddddddd*/
-.page-header{
-    display: box;
-    width:100%;
-    text-align: center;
-    position: center;
+header{
+    width:320px;
+    height:40px;
     background-color:#8b4513;
-    color: white;
 }
 
 /***  フッター　****/
 footer
 {
-    width:320px;
     margin:0;
     padding:0;
-    height:30px;
-    line-height:30px;
+    width:320px;
+    height:40px;
+    background-image:url("../images/footer.png");
+    line-height:40px;
     vertical-align:middle;
-
 }
 .footer-menu
 {
     margin:0;
     padding:0;
     width:106px;
-    background-color:#8b4513;
     text-align:center;
 }

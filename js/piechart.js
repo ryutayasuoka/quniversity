@@ -8,7 +8,8 @@ $(document).ready(function(){
 
 });
 
-function pieAnimation(datas,can){
+//create pie chart
+function createPieChart(data,can){
 
     var tilt;
 

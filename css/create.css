@@ -1,63 +1,110 @@
+header #back-btn
+{
+    width:50px;
+    height:26px;
+    position:relative;
+    top:7px;
+    left:15px;
+}
+
+header #title
+{
+    width:81px;
+    height:19px;
+    position:relative;
+    top:4px;
+    left:60px;
+}
+
+
 #container
 {
     width:320px;
     height:auto;
-    background-color:red;
     background-image:url("../images/kokuban.png");
     background-size:100% 100%;
-}
-
-#title
-{
-    width:320px;
-    height:50px;
-    background-color:gray;
-    margin:0;
-    text-align:center;
-    line-height:50px;
-    vertical-align:middle;
-    font-size:20px;
-    font-weight:bold;
 }
 
 #textarea
 {
     margin:28px 10px 0;
-    width:300px;
-    height:100px;
+    width:296px;
+    height:133px;
 }
 
 textarea
 {
-    width:295px;
-    height:100px;
+    width:296px;
+    height:133px;
+    background-image:url("../images/create_qbox.png");
+    background-size:100% 100%;
+    border:none;
+    font-size:18px;
 }
 
 #selects
 {
     margin:28px auto 0;
     width:238px;
+    height:128px;
+    background-image:url("../images/create_choice.png");
+    background-size:100% 100%;
 }
 
+/* controll selects */
 #selects input
 {
-    margin:0;
-    height:26px;
-    width:238px;
+    height:24px;
+    width:216px;
+    margin-left:4px;
+    border:none;
+    border-radius:none;
+    font-size:14px;
 }
-
+#s1
+{
+    margin-top:4px;
+}
+#h1
+{
+    width:232px;
+    position:relative;
+    top:-103px;
+}
+#h2
+{
+    width:232px;
+    position:relative;
+    top:-83px;
+}
+#h3
+{
+    width:232px;
+    position:relative;
+    top:-62px;
+}
 #comment
 {
     width:238px;
-    height:25px;
     margin:18px auto 0;
-    background-color:yellow;
 }
-#comment span
+
+#comment-image
 {
-    line-height:25px;
-    vertical-align:middle;
-    margin-left:20px;
+    width:160px;
+    height:23px;
+    position:relative;
+    top:0px;
+    left:0px;
+}
+
+#check
+{
+    width:34px;
+    height:33px;
+    position:relative;
+    top:0px;
+    left:-170px;
 }
 
 #category
@@ -65,14 +112,19 @@ textarea
     margin:14px auto 0;
     width:238px;
 }
+#category select
+{
+    width:120px;
+    height:30px;
+    font-size:18px;
+}
 
 #submit
 {
-    width:150px;
-    height:25px;
-    background-color:blue;
-    margin:18px auto 20px;
-    text-align:center;
-    line-height:25px;
-    vertical-align:middle;
+    width:102px;
+    height:34px;
+    background-image:url("../images/create_button.png");
+    background-size:100% 100%;
+    position:center;
+    margin:18px auto;
 }

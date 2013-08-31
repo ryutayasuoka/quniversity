@@ -16,26 +16,26 @@
     <div id="container">
 
       <header>
+        <img id="back-btn" src="../images/create_back.png" />
+        <img id="title" src="../images/create_htitle.png" />
       </header>
 
-
-      <div id="title">
-        質問する
-      </div>
-
       <div id="textarea">
-        <textarea type="text" name="Qcontent" placeholder="ここに質問を入力してね(最大５０文字)"></textarea>
+        <textarea type="text" name="Qcontent" placeholder="ここに質問を入力してね(最大５０文字)" ></textarea>
       </div>
 
       <div id="selects">
-        <input type="text" name="select" placeholder="例：サッカー部"></input><br />
-        <input type="text" name="select" placeholder="10文字以内にしてね！"></input><br />
-        <input type="text" name="select"></input><br />
-        <input type="text" name="select"></input><br />
+        <input type="text" name="select" placeholder="例：サッカー部" style="margin-top:4px;" ></input><br />
+        <input type="text" name="select" placeholder="10文字以内にしてね！" ></input><br />
+        <input type="text" name="select" ></input><br />
+        <input type="text" name="select" ></input>
       </div>
+      <hr id="h1" /><hr id="h2" /><hr id="h3" />
 
-      <div id="comment">
-        <img src="../images/hoge.png" id="comment-image" />
+
+      <div id="comment" value="yes">
+        <img src="../images/create_comment.png" id="comment-image" />
+        <img src="../images/create_check.png" id="check" />
       </div>
 
       <div id="category">
@@ -50,7 +50,6 @@
       </div>
 
       <div id="submit">
-        投稿する
       </div>
 
       <footer>
@@ -71,7 +70,13 @@
 
     //need or not comment.
     $("#comment-image").click(function(){
-
+        if($("#comment").attr("value") == "yes"){
+            $("#comment").attr("value","no");
+            $("#check").css("visibility","hidden");
+        }else{
+            $("#comment").attr("value","yes");
+            $("#check").css("visibility","visible");
+        }
     });
 
     //submit question
@@ -90,10 +95,10 @@
 
         array.push(storage.getItem("sex")); //insert sex
         array.push($("[name=category]").val()); // insert category
+        array.push($("#comment").attr("value")); // insert need comment
 
         //check Qselect
         var selects = $("[name=select]");
-
         var select;
         var selectNum = 1;
         for(var i=0; i<selects.length; i++){
@@ -102,8 +107,8 @@
             //error or none text
             if(select == ""){
                 continue;
-            }else if(!checkLength(select,1,15)){
-                alert("選択肢がエラーだわっしょい");
+            }else if(!checkLength(select,1,10)){
+                alert("各選択肢は最大１０文字です。");
                 return ;
             }
             array.push(select);
