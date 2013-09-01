@@ -14,7 +14,7 @@
   <body>
 
     <header>
-      <img id="back-btn" src="../images/create_back.png" />
+      <img id="back-btn" src="../images/header/back.png" />
       <img id="back-btn-active" src="../images/header/back_actv.png" />
       <img id="title" src="../images/setting/setting_settei.png" />
     </header>
@@ -36,6 +36,7 @@
         </select>
 
         <div id="decide"></div>
+        <div id="decide-active"></div>
 
       </div>
     </div>
@@ -79,6 +80,9 @@
       key = "relation";
       value = $("[name=relation]").val();
       storage.setItem(key,value);
+
+      $(this).css("display","none");
+      $("#decide-active").css("display","block");
 
       location = "index.html";
   });

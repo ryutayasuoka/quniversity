@@ -9,11 +9,11 @@ header #back-btn
 
 header #title
 {
-    width:36px;
+    width:113px;
     height:19px;
     position:relative;
-    top:4px;
-    left:90px;
+    top:0px;
+    left:44px;
 }
 
 #user
