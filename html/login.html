@@ -16,29 +16,32 @@
 
     <!-- begin container -->
     <div id="container">
-    	<div id="backimg">
-      <input type="text" id="username" size="15" placeholder="りゅーちゃん" ></input>
+      <div id="backimg">
+        <input type="text" id="username" size="15" placeholder="りゅーちゃん" >
+        </input>
 
+        <div class="box">
+          <div class="male">
+	    <img src="../images/everyoneQ/everyonesQ_boy_logo.png" id="male" />
+	  </div>
+          <div class="female">
+	    <img src="../images/everyoneQ/everyonesQ_girl_logo.png" id="female" />
+	  </div>
+	  <img src="../images/login/login_maru.png" id="maru" />
+        </div>
 
-      <div class="box">
-        <div class="male">
-		           <img src="../images/everyoneQ/everyonesQ_boy_logo.png" id="male">
-				</div>
-        <div class="female">
-		           <img src="../images/everyoneQ/everyonesQ_girl_logo.png" id="female">
-		    </div>
-		           <img src="../images/login/login_maru.png" id="maru">
+        <div class="select">
+          <select name="relation" id="relationid">
+            <option value="1">後輩</option>
+            <option value="2">先輩</option>
+            <option value="3">幼馴染</option>
+          </select>
+
+          <p id="decide">
+            <img id="button" src="../images/login/login_button.png" />
+          </p>
+        </div>
       </div>
-
-      <div class="select">
-      <select name="relation" id="relationid">
-        <option value="1">後輩</option>
-        <option value="2">先輩</option>
-        <option value="3">幼馴染</option>
-      </select>
-
-      <p id="decide"><img id="button" src="../images/login/login_button.png"></p>
-
     </div>
     <!-- end container -->
 
@@ -61,21 +64,21 @@
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
 
-  var storage = localStorage;
+    var storage = localStorage;
 
     $(document).ready(function(){
         resetUserStatus(storage);
     });
 
     $("#male").click(function(){
-    		$(maru).css("visibility","visible");
-    		$(maru).css("left","-130px");
+    	$(maru).css("visibility","visible");
+    	$(maru).css("left","-130px");
         storage.setItem("sex","male");
 
     });
     $("#female").click(function(){
-    		$(maru).css("visibility","visible");
-    		$(maru).css("left","-30px");
+    	$(maru).css("visibility","visible");
+    	$(maru).css("left","-30px");
         storage.setItem("sex","female");
     });
 
