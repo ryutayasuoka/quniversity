@@ -1,1 +1,57 @@
+#backimg{
+	background-image: url("../images/login/login_page.png");
+	position: relative;
+	background-size: 100% 100%;
+	height: 350px;
+	width: 307px;
+}
+#username{
+	font-size:224%;
+	background-color:transparent;
+	border-style:none;
+	color:white;
+	position:relative;
+	top:30px;
+	left:50px;
+}
+.box{
+	position: relative;
+	top:100px;
+	left: 80px;
+}
+.box .male #male{
+	position:relative;
+/*	top:100px;
+	left: 80px;*/
+}
+.box .female #female{
+	position:relative;
+/*	top:100px;*/
+	left: 80px;
+}
+#button{
+	position: relative;
+	height: 50%;
+	width: 50%;
+}
+.decide{
+	position: relative;
+	top: 100;
+}
 
+#maru{
+	position: relative;
+	height: 70px;
+	width: 62px;
+	visibility: hidden;
+}
+.select{
+	position:relative;
+	top:165px;
+	left: 10px;
+}
+.select #relationid{
+	height: 50px;
+	width: 190px;
+
+}

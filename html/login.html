@@ -16,28 +16,28 @@
 
     <!-- begin container -->
     <div id="container">
+    	<div id="backimg">
+      <input type="text" id="username" size="15" placeholder="りゅーちゃん" ></input>
 
-      <p>ニックネーム</p>
-      <input type="text" id="username" placeholder="りゅーちゃん" ></input>
 
-      <p>あなたは男子？女子？</p>
       <div class="box">
-        <div id="male">
-          男子
-        </div>
-        <div id="female">
-          女子
-        </div>
+        <div class="male">
+		           <img src="../images/everyoneQ/everyonesQ_boy_logo.png" id="male">
+				</div>
+        <div class="female">
+		           <img src="../images/everyoneQ/everyonesQ_girl_logo.png" id="female">
+		    </div>
+		           <img src="../images/login/login_maru.png" id="maru">
       </div>
 
-      <p>この子との関係は？</p>
-      <select name="relation">
+      <div class="select">
+      <select name="relation" id="relationid">
         <option value="1">後輩</option>
         <option value="2">先輩</option>
         <option value="3">幼馴染</option>
       </select>
 
-      <p id="decide">決定</p>
+      <p id="decide"><img id="button" src="../images/login/login_button.png"></p>
 
     </div>
     <!-- end container -->
@@ -58,8 +58,8 @@
 
   <!-- js -->
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
-  <script type="text/javascript" src="../js/quniversity.js" charset="utf-8"></script>
-  <script type="text/javascript" charset="utf-8">
+  <script type="text/javascript" src="../js/quniversity.js"></script>
+  <script type="text/javascript">
 
   var storage = localStorage;
 
@@ -68,9 +68,14 @@
     });
 
     $("#male").click(function(){
+    		$(maru).css("visibility","visible");
+    		$(maru).css("left","-130px");
         storage.setItem("sex","male");
+
     });
     $("#female").click(function(){
+    		$(maru).css("visibility","visible");
+    		$(maru).css("left","-30px");
         storage.setItem("sex","female");
     });
 
