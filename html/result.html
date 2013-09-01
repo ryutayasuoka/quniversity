@@ -13,52 +13,63 @@
 
   <body>
     <header>
-      <img src="" alt="ロゴが入る">
+      <img id="back-btn" src="../images/create_back.png" />
+      <img id="title" src="../images/result/result_title.png" />
     </header>
 
     <!-- begin container -->
     <div id="container">
 
-      <p id="title">回答結果</p>
 
       <div id="Qcontent">
+        <div id="q-username">
+        </div>
+        <div id="q-content">
+        </div>
       </div>
 
-      <p style="margin:14px 0px;">なんて書いてあるかわからん！</p>
+      <div id="answer-mark">
+        <img src="../images/result/result_amark.png" />
+      </div>
 
-      <!---------- begin box ---------->
-      <div class="box">
-        <!-- left box -->
-        <div id="Lbox">
-          <canvas id="pie" height="180" width="180"></canvas>
+      <canvas id="pie" height="200" width="200"></canvas>
 
-          <div id="comment">
-            コメントボタン
-          </div>
+      <div id="total">
+      </div>
 
-          <div id="nice-q">
-            NiceQボタン
-          </div>
-
-          <div id="share-twitter">
-            結果をTwitterでシェアする
-          </div>
-
+      <div id="result" class="box">
+        <div id="selects">
         </div>
+        <div id="crown">
+          <img src="../images/result/result_crown.png" />
+        </div>
+      </div>
 
-        <!-- rieft box -->
-        <div id="Rbox">
-          <div id="selects">
-            選択肢が入る
+      <div class="box">
+        <div>
+          <div id="niceQ">
           </div>
-
-          <div id="chara-image">
-            キャラクターが入る
+          <div id="share">
           </div>
+        </div>
+        <div id="girl">
         </div>
       </div>
 
       <!---------- begin comments ---------->
+
+      <div id="comment">
+        <input type="text" name="comment" placeholder="コメントする"></input>
+      </div>
+
+      <div id="comment-bar">
+      </div>
+
+      <div id="comment-lists">
+      </div>
+
+      <div id="comment-bar-bottom">
+      </div>
 
       <footer>
       </footer>
@@ -82,7 +93,8 @@
         var data = JSON.parse(storage.getItem(questionId));
 
         //insert Qcontent
-        $("#Qcontent").append(data[0]);
+        $("#q-content").append(data[0]);
+        $("#q-username").append("りゅーちゃんからの質問");
         var sex = data[1];
         var category = data[2];
         var commentBool = data[3];
@@ -93,8 +105,11 @@
         //insert selects
         var selectArray = new Array();
         for(var i=0; i<selectNum; i++){
-            selectArray.push(data[i+5]);
+            $("#selects").append('<div class="box" style="margin:3px;"><div style="width:100px;">'+data[i+5]+'</div><div>'+data[i+5+selectNum]+'人</div></div>');
+            //selectArray.push(data[i+5]);
         }
+
+
         //insert selects number
         var selectNumArray = new Array();
         for(var i=0; i<selectNum; i++){
@@ -105,9 +120,19 @@
         //generate canvas 2d object.
         var can = $("#pie")[0].getContext("2d");
         can.beginPath();
-        createPieChart(selectNumArray,can);
+        var total = createPieChart(selectNumArray,can);
 
-        return ;
+        $("#total").append(total+"人中");
+
+        //insert comment
+        insertComments();
+
+    });
+
+
+    $("#niceQ").click(function(){
+        $(this).css("background-image",'url("../images/result/result_button_niceq_actv.png")');
+        $("#girl").css("background-image",'url("../images/result/result_illustg_activ.png")');
     });
   </script>
 </html>

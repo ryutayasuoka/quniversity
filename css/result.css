@@ -1,42 +1,183 @@
-#title
+header #back-btn
 {
-    font-size:20px;
-    font-weight:bold;
+    width:50px;
+    height:26px;
+    position:relative;
+    top:7px;
+    left:15px;
+}
+
+header #title
+{
+    width:136px;
+    height:19px;
+    position:relative;
+    top:4px;
+    left:40px;
 }
 
 #Qcontent
 {
-    width:95%;
-    margin:20px auto 0px;
+    width:294px;
+    height:208px;
+    background-image:url("../images/result/result_qbox.png");
+    background-size:100% 100%;
+    margin:auto;
+    color:white;
 }
-
-/* left box */
-#Lbox
+#q-username
 {
-    width:180px;
+    margin-left:15px;
+    padding-top:35px;
+    font-size:12px;
+
+}
+#q-content
+{
+    margin-left:15px;
+    padding-top:15px;
+    font-size:16px;
+}
+#answer-mark img
+{
+    width:39px;
+    height:41px;
+    position:relative;
+    top:20px;
+    left:30px;
 }
 
+#pie
+{
+    position:relative;
+    left:60px;
+}
+
+#total
+{
+    font-size:16px;
+    color:white;
+    text-align:center;
+}
+
+#result
+{
+    width:280px;
+    margin:10px 0 0 30px;
+}
+#selects
+{
+    width:210px;
+    color:white;
+}
+#crown img
+{
+    width:62px;
+    height:74px;
+    position:relative;
+    top:10px;
+    left:0px;
+}
+#niceQ
+{
+    width:90px;
+    height:49px;
+    background-image:url("../images/result/result_nq.png");
+    background-size:100% 100%;
+    position:relative;
+    top:30px;
+    left:100px;
+}
+#share
+{
+    width:90px;
+    height:49px;
+    background-image:url("../images/result/result_share.png");
+    background-size:100% 100%;
+    position:relative;
+    top:30px;
+    left:35px;
+}
+#girl
+{
+    width:79px;
+    height:147px;
+    background-image:url("../images/result/result_illustg.png");
+    background-size:100% 100%;
+    position:relative;
+    top:20px;
+    left:110px;
+}
+/* comment */
 #comment
 {
-    width:180px;
-    background-color:yellow;
-    margin-top:28px;
+    margin:30px 0 0 20px;
 }
-#nice-q
+
+#comment input
+{
+    width:270px;
+    height:30px;
+    font-size:16px;
+}
+
+#comment-bar
+{
+    width:320px;
+    height:17px;
+    background-image:url("../images/result/result_coverline.png");
+    background-size:100% 100%;
+    margin-top:10px;
+}
+
+.comment-tip
+{
+    width:320px;
+    border-bottom:1px solid white;
+    min-height:70px;
+}
+.comment-icon
+{
+    width:70px;
+}
+.comment-icon img
+{
+    width:50px;
+    height:50px;
+    position:relative;
+    top:10px;
+    left:10px;
+}
+.comment-right
 {
     width:180px;
-    background-color:gray;
-    margin-top:36px;
+    margin-left:10px;
+    color:white;
 }
-#share-twitter
-{
-    width:180px;
-    background-color:blue;
-    margin-top:20px;
+.comment-select{
+    font-size:12px;
+    color:white;
+    font-weight:bold;
+    padding-top:5px;
 }
-/* right box */
-#Rbox
+.comment-sex-image
 {
-    margin-left:26px;
-    width:114px;
+    width:60px;
+}
+.comment-sex-image img
+{
+    width:30px;
+    height:40px;
+    position:relative;
+    top:15px;
+    left:20px;
+}
+
+#comment-bar-bottom
+{
+    width:320px;
+    height:6px;
+    background-image:url("../images/result/result_cundeline.png");
+    background-size:100% 100%;
+    margin:10px 0px;
 }

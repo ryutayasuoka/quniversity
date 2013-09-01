@@ -19,9 +19,37 @@
     <!-- begin container -->
     <div id="container">
 
+      <div id="user" class="box">
+        <div id="icon">
+          <img src="../images/everyoneQ/icon.png" />
+        </div>
+        <div id="username">
+        </div>
+        <div id="sex-image">
+          <img src="../images/everyoneQ/everyonesQ_boy_logo.png" />
+        </div>
+      </div>
+
+      <select name="category">
+        <option value="0">新着順</option>
+        <option value="1">大学生活</option>
+        <option value="2">恋愛</option>
+        <option value="3">素朴な質問</option>
+        <option value="4">ちょっとHな質問</option>
+        <option value="5">くだらない質問</option>
+        <option value="6">その他</option>
+      </select>
 
       <div id="qlist">
+            <div id="list-top"></div>
+
+            <div id="list-content">
+            </div>
+
+
       </div>
+
+
 
     </div>
     <!-- end container -->
@@ -39,7 +67,7 @@
 
     $(document).ready(function(){
         includeFooter();
-
+        $("#username").append(storage.getItem("username"));
         insertQuestions(storage);
     });
 

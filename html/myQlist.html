@@ -6,31 +6,72 @@
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
+    <link rel="stylesheet" type="text/css" href="../css/myQlist.css" />
 
     <title>Quniversity</title>
   </head>
 
   <body>
     <header>
+      <img id="back-btn" src="../images/create_back.png" />
+      <img id="title" src="../images/mypage_title.png" />
     </header>
 
     <!-- begin container -->
     <div id="container">
 
-      <div>
-        <h2>今までの質問</h2>
+      <div id="user" class="box">
+        <div id="icon">
+          <img src="../images/everyoneQ/icon.png" />
+        </div>
+        <div id="username">
+        </div>
+        <div id="sex-image">
+          <img src="../images/everyoneQ/everyonesQ_boy_logo.png" />
+        </div>
       </div>
 
-      <footer>
-      </footer>
+      <select name="category">
+        <option value="0">新着順</option>
+        <option value="1">大学生活</option>
+        <option value="2">恋愛</option>
+        <option value="3">素朴な質問</option>
+        <option value="4">ちょっとHな質問</option>
+        <option value="5">くだらない質問</option>
+        <option value="6">その他</option>
+      </select>
+
+      <div id="qlist">
+            <div id="list-top"></div>
+
+            <div id="list-content">
+            </div>
+
+
+      </div>
+
+
 
     </div>
     <!-- end container -->
 
+    <footer>
+    </footer>
   </body>
 
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
-  <script type="text/javascript" src="../js/webstorage.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
+  <script type="text/javascript">
+
+    var storage = localStorage;
+
+    $(document).ready(function(){
+        includeFooter();
+        $("#username").append(storage.getItem("username"));
+        insertQuestions(storage);
+    });
+
+
+  </script>
 
 </html>

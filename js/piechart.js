@@ -17,6 +17,7 @@ function createPieChart(data,can){
         totalTilt += angle;
     }
     //generateClip(100,100,100,30,can,0);
+    return total;
 }
 
 function drawFan(x,y,radius,tilt,angle,strokeColor,fillColor,target){

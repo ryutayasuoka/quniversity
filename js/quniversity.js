@@ -125,12 +125,23 @@ function setQuestions(storage){
 
 function insertQuestions(storage){
 
-    var qlist = $("#qlist");
+    //preapare some examples
+    var username = new Array("りゅーちゃん","なかむら","おーつき","だいふく","やまはた");
+    var iconname = new Array("hiyoko","peanuts","hiyoko","peanuts","hiyoko");
 
-    for(var i=1; i<6; i++){
+    var qlist = $("#list-content");
+    var sex = storage.getItem("sex");
 
-        var _data = JSON.parse(storage.getItem("q"+i) );
-        qlist.append('<div><a href="result.html?q'+i+'"><div class="'+_data[1]+'">'+_data[0]+'</div></a></div>');
+    for(var i=0; i<5; i++){
+
+        var _data = JSON.parse(storage.getItem( "q"+(i+1) ) );
+
+        if(sex == _data[1]){
+            qlist.append('<div class="list-tip"><a href="result.html?q'+(i+1)+'"><div><div class="box"><div class="list-icon"><img src="../images/result/'+iconname[i]+'.png" /></div><div class="list-content box"><div><div class="q-username">'+username[i]+'</div><div class="q-content">'+_data[0]+'</div><div class="q-answer">集計結果を見る</div></div><div class="sex-image"><img src="../images/everyoneQ/everyonesQ_boy_logo.png" /></div></div></div></div></a></div>');
+        }else{
+            qlist.append('<div class="list-tip"><a href="select.html?q'+(i+1)+'"><div><div class="box"><div class="list-icon"><img src="../images/result/'+iconname[i]+'.png" /></div><div class="list-content box"><div><div class="q-username">'+username[i]+'</div><div class="q-content">'+_data[0]+'</div><div class="q-answer">回答する</div></div><div class="sex-image"><img src="../images/everyoneQ/everyonesQ_girl_logo.png" /></div></div></div></div></a></div>');
+        }
+
     }
 
     return;
@@ -152,4 +163,17 @@ function calcSelectsNum(data){
         break;
     }
     return false;
+}
+
+function insertComments(){
+
+    var comments = new Array("断然野球部でしょ！","私も野球部！","サッカー一択","サッカー部のマネやってました！","難しいなー","人によるよねーー");
+    var sex = new Array("boy","girl","boy","girl","girl","girl");
+    var selects = new Array("①","①！","②","②","③","③");
+    var icon = new Array("peanuts","hiyoko","peanuts","hiyoko","hiyoko","hiyoko");
+    var username = new Array("だいふく","おーつき","りゅーちゃん","たけもと","いたじき","なかむら");
+
+    for(var i=0; i<6; i++){
+        $("#comment-lists").append('<div class="comment-tip box"><div class="comment-icon"><img src="../images/result/'+icon[i]+'.png" /></div><div class="comment-right"><div class="comment-select">'+username[i]+'<span style="margin-left:10px;">回答：'+selects[i]+'</span></div><div class="comment-content">'+comments[i]+'</div></div><div class="comment-sex-image"><img src="../images/result/result_'+sex[i]+'.png" /></div></div>');
+    }
 }
