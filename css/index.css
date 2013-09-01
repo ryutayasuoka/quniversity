@@ -154,14 +154,14 @@ header #title
     background-image:url("../images/statuspage/status_bigheart.png");
     background-size:100% 100%;
     position:relative;
-    top:0px;
+    top:50px;
     left:15px;
 }
 
 #parameter
 {
     width:150px;
-    height:150px;
+    height:120px;
     position:relative;
     top:65px;
     left:57px;
@@ -170,8 +170,10 @@ header #title
 }
 #parameter p
 {
-    margin:2px;
-    padding:0 5px;
+    height:30px;
+    margin:0;
+    /* padding:0 5px; */
+    padding:0;
 }
 #parameter span
 {
@@ -194,9 +196,8 @@ header #title
     background-image:url("../images/statuspage/status_hukidashi.png");
     background-size:100% 100%;
     position:relative;
-    top:-150px;
+    top:-120px;
     left:45px;
-    padding
 }
 #status-comment div
 {
@@ -214,6 +215,6 @@ header #title
     background-image:url("../images/statuspage/status_small_heart.png");
     background-size:100% 100%;
     position:relative;
-    top:-273px;
+    top:-243px;
     left:140px;
 }

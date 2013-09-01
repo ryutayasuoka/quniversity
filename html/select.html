@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Quniversity</title>
 
@@ -30,8 +30,7 @@
       </div>
 
 
-
-      <div id="submit">
+      <div id="selects">
       </div>
 
       <div id="human-image">
@@ -55,14 +54,19 @@
 
   </body>
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
-  <script type="text/javascript" src="../js/quniversity.js" ></script>
-  <script type="text/javascript">
+  <script type="text/javascript" src="../js/quniversity.js" charset="utf-8" ></script>
+  <script type="text/javascript" charset="utf-8">
     var storage = localStorage;
 
     $(document).ready(function(){
         hiddenAddressbar();
 
-        $("#q-content").append(JSON.parse(storage.getItem("q5"))[0]);
+        var q = JSON.parse(storage.getItem(getRequest()));
+        $("#q-content").append(q[0]);
+        var selectNum = calcSelectsNum(q);
+        for(var i=0; i<selectNum; i++){
+            $("#selects").append('<div><a href="result.html?'+getRequest()+'">'+q[i+5]+'</a></div>');
+        }
     });
   </script>
 </html>

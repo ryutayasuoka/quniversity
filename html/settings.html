@@ -6,52 +6,51 @@
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../css/settings.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/settings.css" />
 
     <title>Quniversity</title>
   </head>
 
   <body>
+
     <header>
+      <img id="back-btn" src="../images/create_back.png" />
+      <img id="title" src="../images/setting/setting_settei.png" />
     </header>
 
     <!-- begin container -->
     <div id="container">
+      <div id="setting-background">
 
-      <div>
-        <h2>設定</h2>
-      </div>
-
-      <p>ニックネーム</p>
-      <input type="text" id="username" ></input>
-
-      <p>あなたは男子？女子？</p>
-      <div class="box">
-        <div >
-          ボタン
+        <div id="icon">
+          <img src="../images/setting/setting_icon.png" />
         </div>
-        <div>
-          ボタン
-        </div>
+
+        <input type="text" id="username" ></input>
+
+        <select name="relation">
+          <option value="1">後輩</option>
+          <option value="2">先輩</option>
+          <option value="3">幼馴染</option>
+        </select>
+
+        <div id="decide"></div>
+
       </div>
-
-      <p>この子との関係は？</p>
-      <select name="relation">
-        <option value="1">後輩</option>
-        <option value="2">先輩</option>
-        <option value="3">幼馴染</option>
-      </select>
-
-      <br />
-      <br />
-      <br />
-      <p id="decide">決定</p>
-
-      <footer>
-      </footer>
-
     </div>
     <!-- end container -->
+
+    <footer class="box">
+      <div class="footer-menu">
+        <a href="index.html">マイページ</a>
+      </div>
+      <div class="footer-menu" style="width:108px;">
+        <a href="Qlist.html">皆の質問</a>
+      </div>
+      <div class="footer-menu">
+        <a href="settings.html">設定</a>
+      </div>
+    </footer>
 
   </body>
 
@@ -64,7 +63,8 @@
   $(document).ready(function(){
 
       //include footer
-      includeFooter();
+      //includeFooter();
+      hiddenAddressbar();
 
       //既にある値を格納
       $("#username").val(storage.getItem("username"));

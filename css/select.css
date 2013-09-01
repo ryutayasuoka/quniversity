@@ -42,43 +42,23 @@ header #title
 #selects
 {
     margin:28px auto 0;
-    width:238px;
-    height:128px;
+    width:230px;
+    height:auto;
+    padding:4px;
     background-image:url("../images/create_choice.png");
     background-size:100% 100%;
 }
 
 /* controll selects */
-#selects input
+#selects div
 {
-    height:24px;
-    width:216px;
-    margin-left:4px;
-    border:none;
-    border-radius:none;
-    font-size:14px;
-}
-#s1
-{
-    margin-top:4px;
-}
-#h1
-{
-    width:232px;
-    position:relative;
-    top:-103px;
-}
-#h2
-{
-    width:232px;
-    position:relative;
-    top:-83px;
-}
-#h3
-{
-    width:232px;
-    position:relative;
-    top:-62px;
+    height:20px;
+    width:230px;
+    border:1px solid gray;
+    line-height:20px;
+    vertical-align:middle;
+    font-size:16px;
+    padding-left:3px;
 }
 
 #submit
@@ -90,7 +70,7 @@ header #title
     position:center;
     position:relative;
     top:0px;
-    margin:18px auto 0;
+    margin:1px auto 0;
 }
 #human-image
 {
@@ -98,8 +78,7 @@ header #title
     height:87px;
     background-image:url("../images/answer/answer_boy.png");
     background-size:100% 100%;
-    position:center;
-    position:relative;
-    top:0px;
-    margin:0 auto;
+    position:absolute;
+    top:374px;
+    left:35px;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
 
     <!-- css -->
@@ -101,17 +101,18 @@
     </div>
   </body>
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
-  <script type="text/javascript" src="../js/quniversity.js"></script>
-  <script type="text/javascript">
+  <script type="text/javascript" src="../js/quniversity.js" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
     var storage = localStorage;
     $(document).ready(function(){
         //includeFooter();
         hiddenAddressbar();
         $("#username").append(storage.getItem("username"));
-        $("#new-q-content").append(JSON.parse(storage.getItem("q1"))[0]);
+        alert(JSON.parse(storage.getItem("q5"))[0]);
+        $("#new-q-content").append(JSON.parse(storage.getItem("q5"))[0]);
     });
     $("#new-q").click(function(){
-        location.href = "select.html?q1";
+        location.href = "select.html?q5";
     });
 
     //generate status page
