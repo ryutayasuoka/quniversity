@@ -12,8 +12,8 @@ header #title
     width:81px;
     height:19px;
     position:relative;
-    top:4px;
-    left:60px;
+    top:-2px;
+    left:62px;
 }
 
 
@@ -28,7 +28,7 @@ textarea
 {
     width:296px;
     height:133px;
-    background-image:url("../images/create_qbox.png");
+    background-image:url("../images/create/create_qbox.png");
     background-size:100% 100%;
     border:none;
     font-size:18px;
@@ -39,7 +39,7 @@ textarea
     margin:28px auto 0;
     width:238px;
     height:128px;
-    background-image:url("../images/create_choice.png");
+    background-image:url("../images/create/create_choice.png");
     background-size:100% 100%;
 }
 
@@ -90,6 +90,7 @@ textarea
     position:relative;
     top:0px;
     left:0px;
+    z-index:1;
 }
 
 #check
@@ -117,13 +118,24 @@ textarea
 
 #submit
 {
-    width:102px;
-    height:34px;
-    background-image:url("../images/create_button.png");
+    width:105px;
+    height:36px;
+    background-image:url("../images/create/create_button.png");
     background-size:100% 100%;
     position:center;
     position:relative;
     top:-7px;
-
-    margin:18px auto;
+    margin:10px auto 0;
+}
+#submit-active
+{
+    width:105px;
+    height:36px;
+    background-image:url("../images/create/create_button_actv.png");
+    background-size:100% 100%;
+    position:center;
+    position:relative;
+    top:-7px;
+    margin:10px auto 0;
+    display:none;
 }

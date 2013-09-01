@@ -16,7 +16,7 @@
     <header>
       <img id="back-btn" src="../images/header/back.png" />
       <img id="back-btn-active" src="../images/header/back_actv.png" />
-      <img id="title" src="../images/create_htitle.png" />
+      <img id="title" src="../images/create/create_htitle.png" />
     </header>
 
     <!-- begin container -->
@@ -37,8 +37,8 @@
 
       <div id="comment" value="yes">
 
-        <img src="../images/create_comment.png" id="comment-image" />
-        <img src="../images/create_check.png" id="check" />
+        <img src="../images/create/create_comment.png" id="comment-image" />
+        <img src="../images/create/create_check.png" id="check" />
       </div>
 
       <div id="category">
@@ -54,6 +54,8 @@
 
       <div id="submit">
       </div>
+      <div id="submit-active">
+      </div>
 
     </div>
     <!-- end container -->
@@ -66,86 +68,90 @@
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
-    $(document).ready(function(){
-        //include footer
-        hiddenAddressbar();
-        includeFooter();
-    });
 
-    //need or not comment.
-    $("#comment-image").click(function(){
-        if($("#comment").attr("value") == "yes"){
-            $("#comment").attr("value","no");
-            $("#check").css("visibility","hidden");
-        }else{
-            $("#comment").attr("value","yes");
-            $("#check").css("visibility","visible");
-        }
-    });
+  var storage = localStorage;
 
-    //submit question
-    $("#submit").click(function(){
+  $(document).ready(function(){
+      //include footer
+      hiddenAddressbar();
+      includeFooter();
+  });
 
-        var storage = localStorage;
-        var array = new Array();
+  //need or not comment.
+  $("#comment-image").click(function(){
+      if($("#comment").attr("value") == "yes"){
+          $("#comment").attr("value","no");
+          $("#check").css("visibility","hidden");
+      }else{
+          $("#comment").attr("value","yes");
+          $("#check").css("visibility","visible");
+      }
+  });
 
-        //check Qcontent
-        var qContent = $("[name=Qcontent]").val();
-        if(!checkLength(qContent,1,80) ){
-            alert("質問内容が入ってないわーーーー！！！");
-            return ;
-        }
-        array.push(qContent);
+  //submit question
+  $("#submit").click(function(){
 
-        array.push(storage.getItem("sex")); //insert sex
-        array.push($("[name=category]").val()); // insert category
-        array.push($("#comment").attr("value")); // insert need comment
-        array.push("0"); //insert NiceQcount
+      var array = new Array();
+
+      //check Qcontent
+      var qContent = $("[name=Qcontent]").val();
+      if(!checkLength(qContent,1,80) ){
+          alert("質問の内容が入力されてないよ！");
+          return ;
+      }
+      array.push(qContent);
+
+      array.push(storage.getItem("sex")); //insert sex
+      array.push($("[name=category]").val()); // insert category
+      array.push($("#comment").attr("value")); // insert need comment
+      array.push("0"); //insert NiceQcount
 
 
-        //check Qselect
-        var selects = $("[name=select]");
-        var select;
-        var selectNum = 1;
-        for(var i=0; i<selects.length; i++){
+      //check Qselect
+      var selects = $("[name=select]");
+      var select;
+      var selectNum = 1;
+      for(var i=0; i<selects.length; i++){
 
-            select = selects[i].value;
-            //error or none text
-            if(select == ""){
-                continue;
-            }else if(!checkLength(select,1,10)){
-                alert("各選択肢は最大１０文字です。");
-                return ;
-            }
-            array.push(select);
-            selectNum++;
-        }
-        // error
-        if(selectNum == 1){
-            alert("選択肢が１つもありません。");
-            return ;
-        }
+          select = selects[i].value;
+          //error or none text
+          if(select == ""){
+              continue;
+          }else if(!checkLength(select,1,10)){
+              alert("各選択肢は最大１０文字だよ！");
+              return ;
+          }
+          array.push(select);
+          selectNum++;
+      }
+      // error
+      if(selectNum == 1){
+          alert("選択肢が１つもないよ！");
+          return ;
+      }
 
-        // insert "その他"
-        array.push("その他");
-        // insert each select count
-        for(var i=0; i<selectNum; i++){
-            array.push("0");
-        }
+      // insert "その他"
+      array.push("その他");
+      // insert each select count
+      for(var i=0; i<selectNum; i++){
+          array.push("0");
+      }
 
-        var storage = localStorage;
-        storage.removeItem("question1");
-        storage.setItem("cq",JSON.stringify(array));
-        location.href = "result.html?cq";
-    });
+      storage.removeItem("question1");
+      storage.setItem("cq",JSON.stringify(array));
 
-    //back button
-    $("#back-btn").click(function(){
-        $(this).css("display","none");
-        $("#back-btn-active").css("display","inline");
-        // setLastUrl(storage);
-        // location.href = storage.getItem("lastVisit");
-    });
+      $(this).css("display","none");
+      $("#submit-active").css("display","block");
+
+      location.href = "result.html?cq";
+  });
+
+  //back button
+  $("#back-btn").click(function(){
+      $(this).css("display","none");
+      $("#back-btn-active").css("display","inline");
+      history.back();
+  });
 
   </script>
 </html>

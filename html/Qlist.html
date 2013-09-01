@@ -76,8 +76,7 @@
     $("#back-btn").click(function(){
         $(this).css("display","none");
         $("#back-btn-active").css("display","inline");
-        // setLastUrl(storage);
-        // location.href = storage.getItem("lastVisit");
+        history.back();
     });
 
   </script>
