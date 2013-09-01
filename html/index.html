@@ -69,15 +69,15 @@
     <!-- end container -->
 
     <footer class="box">
-      <div class="footer-menu">
-        <a href="index.html">マイページ</a>
-      </div>
-      <div class="footer-menu" style="width:108px;">
-        <a href="Qlist.html">皆の質問</a>
-      </div>
-      <div class="footer-menu">
-        <a href="settings.html">設定</a>
-      </div>
+      <!-- <div class="footer-menu"> -->
+      <!--   <a href="index.html">マイページ</a> -->
+      <!-- </div> -->
+      <!-- <div class="footer-menu" style="width:108px;"> -->
+      <!--   <a href="Qlist.html">皆の質問</a> -->
+      <!-- </div> -->
+      <!-- <div class="footer-menu"> -->
+      <!--   <a href="settings.html">設定</a> -->
+      <!-- </div> -->
     </footer>
 
     <div id="status-page">
@@ -105,7 +105,7 @@
   <script type="text/javascript" charset="utf-8">
     var storage = localStorage;
     $(document).ready(function(){
-        //includeFooter();
+        includeFooter();
         hiddenAddressbar();
         $("#username").append(storage.getItem("username"));
         $("#new-q-content").append(JSON.parse(storage.getItem("q5"))[0]);

@@ -40,16 +40,7 @@
     </div>
     <!-- end container -->
 
-    <footer class="box">
-      <div class="footer-menu">
-        <a href="index.html">マイページ</a>
-      </div>
-      <div class="footer-menu" style="width:108px;">
-        <a href="Qlist.html">皆の質問</a>
-      </div>
-      <div class="footer-menu">
-        <a href="settings.html">設定</a>
-      </div>
+    <footer>
     </footer>
 
   </body>
@@ -59,6 +50,7 @@
     var storage = localStorage;
 
     $(document).ready(function(){
+        includeFooter();
         hiddenAddressbar();
 
         var q = JSON.parse(storage.getItem(getRequest()));

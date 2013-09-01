@@ -8,7 +8,20 @@ function hiddenAddressbar(){
 
 //include html footer
 function includeFooter(){
-    $("footer").attr("class","box").append('<div class="footer-menu"><a href="index.html">マイページ</a></div><div class="footer-menu" style="width:108px;"><a href="Qlist.html">皆の質問</a></div><div class="footer-menu"><a href="settings.html">設定</a></div>');
+    $("footer").attr("class","box").append('<div id="footer-left"></div><div><a href="index.html"><div id="footer-menu1"></div></a></div><div><a href="Qlist.html"><div id="footer-menu2"></div></a></div><div><a href="create.html"><div id="footer-menu3"></div></a></div><div id="footer-right"></div>');
+
+    switch(location.href){
+    case "http://creative2015.lolipop.jp/otonachallenge/html/index.html":
+        $("#footer-menu1").css("background-image",'url("../images/footer/footer_my_activ.png")');
+        break;
+    case "http://creative2015.lolipop.jp/otonachallenge/html/Qlist.html":
+        $("#footer-menu2").css("background-image",'url("../images/footer/footer_e_activ.png")');
+        break;
+    case "http://creative2015.lolipop.jp/otonachallenge/html/create.html":
+        $("#footer-menu3").css("background-image",'url("../images/footer/footer_q_activ.png")');
+        break;
+    }
+
     return ;
 }
 
