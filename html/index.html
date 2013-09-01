@@ -14,8 +14,7 @@
   <body>
 
     <header>
-      <img id="back-btn" src="../images/create_back.png" />
-      <img id="title" src="../images/mypage_title.png" />
+      <img id="title" src="../images/mypage/mypage_title.png" />
     </header>
 
     <!-- begin container -->
@@ -24,23 +23,20 @@
 
       <div class="box" id="profile">
         <div id="user">
-          <img src="../images/mypage_icon1.png" /><span id="username"></span>
+          <img src="../images/mypage/mypage_icon1.png" /><span id="username"></span>
         </div>
         <div id="settings">
           <a href="settings.html">
-            <img src="../images/mypage_settei.png" />
+            <img src="../images/mypage/mypage_settei.png" />
           </a>
         </div>
       </div>
 
       <div id="new-q" class="box" >
         <div id="newq-img1">
-          <img src="../images/mypage_icon2.png" />
+          <img src="../images/mypage/mypage_icon2.png" />
         </div>
         <div id="new-q-content">
-        </div>
-        <div id="newq-img2">
-          <img src="../images/mypage_zyoshi.png" />
         </div>
       </div>
 
@@ -48,36 +44,27 @@
         <div id="content-left">
           <div id="create">
             <a href="create.html" >
-              <img src="../images/mypage_qbutton.png" />
+              <img src="../images/mypage/mypage_qbutton.png" />
             </a>
           </div>
           <div id="my-q-list">
             <a href="myQlist.html">
-              <img src="../images/mypage_imamadeno.png" />
+              <img src="../images/mypage/mypage_imamadeno.png" />
             </a>
           </div>
           <div id="kokuban">
-            <img src="../images/mypage_kokuban.png" />
+            <img src="../images/mypage/mypage_kokuban.png" />
           </div>
         </div>
 
         <div id="content-right">
-          <img src="../images/mypage_status.png" id="status" />
+          <img src="../images/mypage/mypage_status.png" id="status" />
         </div>
       </div>
     </div>
     <!-- end container -->
 
-    <footer class="box">
-      <!-- <div class="footer-menu"> -->
-      <!--   <a href="index.html">マイページ</a> -->
-      <!-- </div> -->
-      <!-- <div class="footer-menu" style="width:108px;"> -->
-      <!--   <a href="Qlist.html">皆の質問</a> -->
-      <!-- </div> -->
-      <!-- <div class="footer-menu"> -->
-      <!--   <a href="settings.html">設定</a> -->
-      <!-- </div> -->
+    <footer>
     </footer>
 
     <div id="status-page">
@@ -104,6 +91,7 @@
   <script type="text/javascript" src="../js/quniversity.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
     var storage = localStorage;
+
     $(document).ready(function(){
         includeFooter();
         hiddenAddressbar();
@@ -118,6 +106,7 @@
     $("#status").click(function(){
         viewStatus(storage);
     });
+
     //remove status page
     $("#status-page").click(function(){
         removeStatus();

@@ -15,6 +15,7 @@
 
     <header>
       <img id="back-btn" src="../images/create_back.png" />
+      <img id="back-btn-active" src="../images/header/back_actv.png" />
       <img id="title" src="../images/answer/answer_title.png" />
     </header>
 
@@ -60,5 +61,14 @@
             $("#selects").append('<div><a href="result.html?'+getRequest()+'">'+q[i+5]+'</a></div>');
         }
     });
+
+    //back button
+    $("#back-btn").click(function(){
+        $(this).css("display","none");
+        $("#back-btn-active").css("display","inline");
+        // setLastUrl(storage);
+        // location.href = storage.getItem("lastVisit");
+    });
+
   </script>
 </html>

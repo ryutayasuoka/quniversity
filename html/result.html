@@ -14,6 +14,7 @@
   <body>
     <header>
       <img id="back-btn" src="../images/create_back.png" />
+      <img id="back-btn-active" src="../images/header/back_actv.png" />
       <img id="title" src="../images/result/result_title.png" />
     </header>
 
@@ -135,5 +136,14 @@
         $(this).css("background-image",'url("../images/result/result_button_niceq_actv.png")');
         $("#girl").css("background-image",'url("../images/result/result_illustg_activ.png")');
     });
+
+    //back button
+    $("#back-btn").click(function(){
+        $(this).css("display","none");
+        $("#back-btn-active").css("display","inline");
+        // setLastUrl(storage);
+        // location.href = storage.getItem("lastVisit");
+    });
+
   </script>
 </html>

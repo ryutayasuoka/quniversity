@@ -14,7 +14,8 @@
   <body>
 
     <header>
-      <img id="back-btn" src="../images/create_back.png" />
+      <img id="back-btn" src="../images/header/back.png" />
+      <img id="back-btn-active" src="../images/header/back_actv.png" />
       <img id="title" src="../images/create_htitle.png" />
     </header>
 
@@ -35,6 +36,7 @@
 
 
       <div id="comment" value="yes">
+
         <img src="../images/create_comment.png" id="comment-image" />
         <img src="../images/create_check.png" id="check" />
       </div>
@@ -135,6 +137,14 @@
         storage.removeItem("question1");
         storage.setItem("cq",JSON.stringify(array));
         location.href = "result.html?cq";
+    });
+
+    //back button
+    $("#back-btn").click(function(){
+        $(this).css("display","none");
+        $("#back-btn-active").css("display","inline");
+        // setLastUrl(storage);
+        // location.href = storage.getItem("lastVisit");
     });
 
   </script>

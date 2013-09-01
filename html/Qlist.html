@@ -12,7 +12,8 @@
 
   <body>
     <header>
-      <img id="back-btn" src="../images/create_back.png" />
+      <img id="back-btn" src="../images/header/back.png" />
+      <img id="back-btn-active" src="../images/header/back_actv.png" />
       <img id="title" src="../images/mypage_title.png" />
     </header>
 
@@ -71,6 +72,13 @@
         insertQuestions(storage);
     });
 
+    //back button
+    $("#back-btn").click(function(){
+        $(this).css("display","none");
+        $("#back-btn-active").css("display","inline");
+        // setLastUrl(storage);
+        // location.href = storage.getItem("lastVisit");
+    });
 
   </script>
 

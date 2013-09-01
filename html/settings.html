@@ -15,6 +15,7 @@
 
     <header>
       <img id="back-btn" src="../images/create_back.png" />
+      <img id="back-btn-active" src="../images/header/back_actv.png" />
       <img id="title" src="../images/setting/setting_settei.png" />
     </header>
 
@@ -81,6 +82,15 @@
 
       location = "index.html";
   });
+
+  //back button
+  $("#back-btn").click(function(){
+      $(this).css("display","none");
+      $("#back-btn-active").css("display","inline");
+      // setLastUrl(storage);
+      // location.href = storage.getItem("lastVisit");
+  });
+
 
   </script>
 </html>

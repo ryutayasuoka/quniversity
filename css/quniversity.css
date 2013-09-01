@@ -33,8 +33,29 @@ header
     padding:0;
     width:320px;
     height:40px;
-    background-image:url("../images/header.png");
+    background-image:url("../images/header/header.png");
+    background-size:100% 100%;
 }
+header #back-btn
+{
+    width:50px;
+    height:26px;
+    position:relative;
+    top:7px;
+    left:15px;
+    display:inline;
+}
+
+header #back-btn-active
+{
+    width:50px;
+    height:26px;
+    position:relative;
+    top:7px;
+    left:15px;
+    display:none;
+}
+
 
 /***  フッター　****/
 footer
