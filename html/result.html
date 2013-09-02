@@ -61,10 +61,14 @@
         </div>
       </div>
 
+
       <!---------- begin comments ---------->
 
-      <div id="comment">
-        <input type="text" name="comment" placeholder="コメントする"></input>
+      <div id="comment" class="box">
+        <div>
+          <input type="text" name="comment1" placeholder="コメントする"></input>
+        </div>
+        <div id="submit1" >投稿</div>
       </div>
 
       <div id="comment-bar">
@@ -88,13 +92,15 @@
   <script type="text/javascript" src="../js/piechart.js"></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
+    var storage = localStorage;
+
     $(document).ready(function(){
         includeFooter();
         hiddenAddressbar();
 
         var questionId = getRequest();
 
-        var storage = localStorage;
+
         //data = [content,sex,category,commentBool,selects,selectsCount,niceq]
         var data = JSON.parse(storage.getItem(questionId));
 
@@ -143,7 +149,23 @@
 
     });
 
+    //submit comment
+    $("#submit1").click(function(){
+        if($("[name=comment1]").val() == ""){
+            alert("コメントが入力されてないよ！");
+            return ;
+        }
+        submitComment($("[name=comment1]").val(), storage);
+    });
+    // $("#submit2").click(function(){
+    //     if($("[name=comment2]").val() == ""){
+    //         alert("コメントが入力されてないよ！");
+    //         return ;
+    //     }
+    //     submitComment($("[name=comment2]").val(), storage);
+    // });
 
+    //button animation
     $("#niceQ").bind('touchstart',function(){
         $(this).css("display","none");
         $("#niceQ-active").css("display","block");

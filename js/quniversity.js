@@ -190,6 +190,16 @@ function insertComments(){
         $("#comment-lists").append('<div class="comment-tip box"><div class="comment-icon"><img src="../images/result/'+icon[i]+'.png" /></div><div class="comment-right"><div class="comment-select">'+username[i]+'<span style="margin-left:10px;">回答：'+selects[i]+'</span></div><div class="comment-content">'+comments[i]+'</div></div><div class="comment-sex-image"><img src="../images/result/result_'+sex[i]+'.png" /></div></div>');
     }
 }
+function submitComment(comment,storage){
+
+    var sex = "boy";
+    if(storage.getItem("username") == "female"){
+        sex = "girl";
+    }
+
+    $("#comment-lists").append('<div class="comment-tip box"><div class="comment-icon"><img src="../images/result/hiyoko.png" /></div><div class="comment-right"><div class="comment-select">'+storage.getItem("username")+'<span style="margin-left:10px;">回答：②</span></div><div class="comment-content">'+comment+'</div></div><div class="comment-sex-image"><img src="../images/result/result_'+sex+'.png" /></div></div>');
+
+}
 
 //back button
 $("#back-btn").bind('touchstart', function(){

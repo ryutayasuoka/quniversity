@@ -162,9 +162,17 @@ header #title
 
 #comment input
 {
-    width:270px;
+    width:200px;
     height:30px;
     font-size:16px;
+}
+#submit
+{
+    width:50px;
+    height:20px;
+    position:relative;
+    top:3px;
+    left:10px;
 }
 
 #comment-bar
