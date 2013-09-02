@@ -42,41 +42,56 @@
 .select{
 /*	background-image: url("../images/login/login_girlillust.png"),
 	url("../images/login/login_boyillust.png");
-*/	position:absolute;
-	top:300px;
-	left: 15%;
+*/	position:relative;
+    display: box;
+    display: -webkit-box;  /* Safari,Google Chrome */
+    display: -moz-box;  /* Firefox */
+	top:86%;
 }
 .select #relationid{
+	position: relative;
+	left: 30%;
 	height: 46px;
 	width: 158px;
 }
 #button{
-	position:absolute;
+	position:relative;
 	height: 53px;
 	width: 127px;
+	left:35%;
 /*	visibility: hidden;*/
 }#button2{
 	position:absolute;
 	height: 53px;
 	width: 127px;
+	left:37%;
 	visibility: hidden;
 }
 #decide{
-	position: absolute;
-	top:85%;
+	position: relative;
+	top:36%;
 }
 .gm{
 	position: relative;
-	left:100%;
+	width:160px;
+	top:70%;
 }
 .dpbox{
 	position: relative;
+	width: 158px
+	left:10%;
 }
 #chara_female{
-	position: absolute;
+	position: relative;
+	height:92px;
+	width: 75px;
+	left: 40%;
 	visibility: hidden;
 }
 #chara_male{
-	position: absolute;
+	position: relative;
+	height:92px;
+	width: 80px;
+	left: -10%;
 	visibility: hidden;
 }
