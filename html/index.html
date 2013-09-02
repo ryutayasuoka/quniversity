@@ -104,20 +104,11 @@
     //generate status page
     $("#status").bind('touchstart',function(){
         $(this).css("display","none");
-        $("#status-active").css("disp lay","inline");
+        $("#status-active").css("display","inline");
     });
     $("#status").bind('touchend',function(){
         $(this).css("display","inline");
         $("#status-active").css("display","none");
-        //setTimeout(function(){
-          // debugger;
-        //   if($("#status-heart").hasClass('motion')){
-        //     $("#status-heart").removeClass('motion');
-        //   } else {
-        //     $("#status-heart").addClass('motion');
-        //   }
-        // }, 100);
-
     });
     $("#status").click(function(){
         viewStatus(storage);

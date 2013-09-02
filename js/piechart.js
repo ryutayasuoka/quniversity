@@ -7,7 +7,6 @@ function createPieChart(data,can){
     var totalTilt = 0;
     var color = new Array("rgb(214,158,194)","rgb(0,177,247)","rgb(255,241,121)","rgb(143,130,188)","rgb(180,218,189)");
     for(var i=0; i<data.length; i++){
-
         total += data[i];
     }
 

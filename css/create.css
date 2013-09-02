@@ -21,6 +21,30 @@ header #title
     left:62px;
 }
 
+#sub-title1
+{
+    width:152px;
+    height:18px;
+    margin:0px 0px 10px 10px;
+    background-image:url("../images/create/create_shitsumon.png");
+    background-size:100% 100%;
+}
+#sub-title2
+{
+    width:166px;
+    height:17px;
+    margin:15px 0px 10px 10px;
+    background-image:url("../images/create/create_sentakushi.png");
+    background-size:100% 100%;
+}
+#sub-title3
+{
+    width:161px;
+    height:18px;
+    margin:10px 0px 10px 10px;
+    background-image:url("../images/create/create_categorytitle.png");
+    background-size:100% 100%;
+}
 
 #textarea
 {
@@ -76,14 +100,6 @@ textarea
     left:-170px;
 }
 
-#category-image
-{
-    margin:18px 0 0 40px;
-    width:142px;
-    height:18px;
-    background-image:url("../images/create/create_categorytitle.png");
-    background-size:100% 100%;
-}
 #category
 {
     margin:14px auto 0 40px;

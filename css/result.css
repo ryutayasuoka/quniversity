@@ -50,7 +50,7 @@ header #title
 {
     width:199px;
     height:199px;
-    background-image:url("../images/result/result_shitsumonsya.png");
+    background-image:url("../images/result/result_circle.png");
     background-size:100% 100%;
     position:relative;
     left:60px;
@@ -155,24 +155,37 @@ header #title
     display:none;
 }
 /* comment */
-#comment
+.comment
 {
-    margin:30px 0 0 20px;
+    margin:30px 0 0 10px;
 }
 
-#comment input
+.comment input
 {
     width:200px;
     height:30px;
     font-size:16px;
 }
-#submit
+.submit
 {
-    width:50px;
-    height:20px;
+    width:69px;
+    height:28px;
+    background-image:url("../images/result/result_co_b.png");
+    background-size:100% 100%;
     position:relative;
-    top:3px;
-    left:10px;
+    top:5px;
+    left:5px;
+}
+.submit-active
+{
+    width:69px;
+    height:28px;
+    background-image:url("../images/result/result_co_b_active.png");
+    background-size:100% 100%;
+    position:relative;
+    top:5px;
+    left:5px;
+    display:none;
 }
 
 #comment-bar

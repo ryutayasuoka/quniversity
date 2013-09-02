@@ -64,11 +64,12 @@
 
       <!---------- begin comments ---------->
 
-      <div id="comment" class="box">
+      <div class="comment box">
         <div>
           <input type="text" name="comment1" placeholder="コメントする"></input>
         </div>
-        <div id="submit1" >投稿</div>
+        <div id="submit1" class="submit" ></div>
+        <div id="submit1-active" class="submit-active" ></div>
       </div>
 
       <div id="comment-bar">
@@ -77,8 +78,17 @@
       <div id="comment-lists">
       </div>
 
+      <div class="comment box">
+        <div>
+          <input type="text" name="comment2" placeholder="コメントする"></input>
+        </div>
+        <div id="submit2" class="submit" ></div>
+        <div id="submit2-active" class="submit-active" ></div>
+      </div>
+
       <div id="comment-bar-bottom">
       </div>
+
 
       <footer>
       </footer>
@@ -148,8 +158,26 @@
         insertComments();
 
     });
-
-    //submit comment
+    //
+    //button animation
+    $("#niceQ").bind('touchstart',function(){
+        $(this).css("display","none");
+        $("#niceQ-active").css("display","block");
+    });
+    $("#niceQ").bind('touchend',function(){
+        // $(this).css("display","block");
+        // $("#niceQ-active").css("display","none");
+        $("#human").css("display","none");
+        $("#human-active").css("display","block");
+    });
+    $("#submit1").bind('touchstart',function(){
+        $(this).css("display","none");
+        $("#submit1-active").css("display","block");
+    });
+    $("#submit1").bind('touchend',function(){
+        $(this).css("display","block");
+        $("#submit1-active").css("display","none");
+    });
     $("#submit1").click(function(){
         if($("[name=comment1]").val() == ""){
             alert("コメントが入力されてないよ！");
@@ -157,26 +185,22 @@
         }
         submitComment($("[name=comment1]").val(), storage);
     });
-    // $("#submit2").click(function(){
-    //     if($("[name=comment2]").val() == ""){
-    //         alert("コメントが入力されてないよ！");
-    //         return ;
-    //     }
-    //     submitComment($("[name=comment2]").val(), storage);
-    // });
-
-    //button animation
-    $("#niceQ").bind('touchstart',function(){
+    $("#submit2").bind('touchstart',function(){
         $(this).css("display","none");
-        $("#niceQ-active").css("display","block");
+        $("#submit2-active").css("display","block");
     });
-    $("#niceQ").bind('touchend',function(){
+    $("#submit2").bind('touchend',function(){
         $(this).css("display","block");
-        $("#niceQ-active").css("display","none");
-        $("#human").css("display","none");
-        $("#human-active").css("display","block");
-        alert("NiceQしました！！")
+        $("#submit2-active").css("display","none");
     });
+    $("#submit2").click(function(){
+        if($("[name=comment2]").val() == ""){
+            alert("コメントが入力されてないよ！");
+            return ;
+        }
+        submitComment($("[name=comment2]").val(), storage);
+    });
+
     $("#share").bind('touchstart',function(){
         $(this).css("display","none");
         $("#share-active").css("display","block");
@@ -188,5 +212,6 @@
     $("#share").click(function(){
         alert("このボタンでTwitterにシェアできる予定です！！");
     });
+
   </script>
 </html>
