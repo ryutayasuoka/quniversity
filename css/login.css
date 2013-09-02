@@ -1,97 +1,137 @@
+html
+{
+    width:320px;
+    overflow:hidden;
+}
+body
+{
+    width:320px;
+    overflow:hidden;
+}
+
+#container
+{
+    padding-bottom:40px;
+}
+
+header #title
+{
+    width:74px;
+    height:19px;
+    position:relative;
+    top:5px;
+    left:124px;
+}
+footer
+{
+    background-image:url("../images/footer/footer_nashi.png");
+    background-size:100% 100%;
+}
+
 #backimg{
-	background-image: url("../images/login/login_page.png");
-	position: absolute;
-	background-size: 100% 100%;
-	top: 48px;
-	height: 350px;
-	width: 307px;
+    background-image: url("../images/login/login_page.png");
+    position: absolute;
+    background-size: 100% 100%;
+    top: 48px;
+    height: 350px;
+    width: 307px;
 }
 #username{
-	font-size:150%;
-	background-color:transparent;
-	border-style:none;
-	color:white;
-	position:absolute;
-	margin: 10px;
-	padding: 10px;
-	top:5%;
-	left:11%;
+    font-size:150%;
+    background-color:transparent;
+    border-style:none;
+    color:white;
+    position:absolute;
+    margin: 10px;
+    padding: 10px;
+    top:4%;
+    left:11%;
 }
 .box{
-	position: absolute;
-	top:40%;
+    position: absolute;
+    top:40%;
 }
 .fmbox{
-	position:absolute;
-	top: 39%;
+    position:absolute;
+    top: 39%;
 }
 .fmbox .male #male{
-	position:absolute;
-	left: 80px;
+    position:absolute;
+    left: 80px;
 }
 .fmbox .female #female{
-	position:absolute;
-	left: 350%;
+    position:absolute;
+    left: 350%;
 }
 #maru{
-	position: relative;
-	height: 80px;
-	width: 62px;
-	visibility: hidden;
+    position: relative;
+    height: 80px;
+    width: 62px;
+    visibility: hidden;
 }
 .select{
-/*	background-image: url("../images/login/login_girlillust.png"),
-	url("../images/login/login_boyillust.png");
-*/	position:relative;
+    position:relative;
     display: box;
     display: -webkit-box;  /* Safari,Google Chrome */
     display: -moz-box;  /* Firefox */
-	top:86%;
+    top:86%;
 }
 .select #relationid{
-	position: relative;
-	left: 30%;
-	height: 46px;
-	width: 158px;
+    position: relative;
+    left: 30%;
+    height: 46px;
+    width: 210px;
+}
+select
+{
+    background-color:transparent;
+    border:none;
+    font-size:20px;
+    color:white;
+    width:100px;
 }
 #button{
-	position:relative;
-	height: 53px;
-	width: 127px;
-	left:35%;
-/*	visibility: hidden;*/
-}#button2{
-	position:absolute;
-	height: 53px;
-	width: 127px;
-	left:37%;
-	visibility: hidden;
+    height: 53px;
+    width: 127px;
+    position:relative;
+    left:43%;
+    top:20px;
+}
+#button-active{
+    height: 53px;
+    width: 127px;
+    position:relative;
+    left:43%;
+    top:20px;
+    display:none;
 }
 #decide{
-	position: relative;
-	top:36%;
+    position: relative;
+    top:36%;
 }
 .gm{
-	position: relative;
-	width:160px;
-	top:70%;
+    position: relative;
+    width:160px;
+    top:70%;
 }
 .dpbox{
-	position: relative;
-	width: 158px
-	left:10%;
+    position: relative;
+    width: 158px
+    left:10%;
 }
 #chara_female{
-	position: relative;
-	height:92px;
-	width: 75px;
-	left: 40%;
-	visibility: hidden;
+    position: relative;
+    height:92px;
+    width: 75px;
+    left: 10%;
+    top:-40px;
+    visibility: hidden;
 }
 #chara_male{
-	position: relative;
-	height:92px;
-	width: 80px;
-	left: -10%;
-	visibility: hidden;
+    position: relative;
+    height:92px;
+    width: 80px;
+    left: -40%;
+    top:-40px;
+    visibility: hidden;
 }

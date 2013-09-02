@@ -53,8 +53,8 @@ function setFirstUserStatus(storage){
     //set username
     key = "username";
     value = $("#username").val();
-    if(!checkLength(value,5,8) ){
-        alert("ニックネームは５文字以上８文字以下で指定してください。");
+    if(!checkLength(value,1,10) ){
+        alert("ニックネームは1文字以上１０文字以下で指定してね！");
         return ;
     }
     storage.setItem(key,value);
@@ -62,7 +62,7 @@ function setFirstUserStatus(storage){
 
     //validate sex
     if(storage.getItem("sex") == null){
-        alert("性別を指定してください。");
+        alert("性別を指定してね！");
         return ;
     }
 
