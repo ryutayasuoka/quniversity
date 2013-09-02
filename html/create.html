@@ -27,12 +27,11 @@
       </div>
 
       <div id="selects">
-        <input type="text" name="select" placeholder="例：サッカー部" style="margin-top:4px;" ></input><br />
-        <input type="text" name="select" placeholder="10文字以内にしてね！" ></input><br />
+        <input type="text" name="select" placeholder="選択肢を作ってね！" style="margin-top:4px;" ></input><br />
+        <input type="text" name="select" placeholder="選択肢は10文字以内だよ！" ></input><br />
         <input type="text" name="select" ></input><br />
         <input type="text" name="select" ></input>
       </div>
-      <hr id="h1" /><hr id="h2" /><hr id="h3" />
 
 
       <div id="comment" value="yes">
@@ -41,6 +40,7 @@
         <img src="../images/create/create_check.png" id="check" />
       </div>
 
+      <div id="category-image" ></div>
       <div id="category">
         <select name="category">
           <option value="1">大学生活</option>
@@ -78,7 +78,7 @@
   });
 
   //need or not comment.
-  $("#comment-image").click(function(){
+  $("#comment-image , #check").click(function(){
       if($("#comment").attr("value") == "yes"){
           $("#comment").attr("value","no");
           $("#check").css("visibility","hidden");
@@ -89,6 +89,14 @@
   });
 
   //submit question
+  $("#submit").bind('touchstart',function(){
+      $(this).css("display","none");
+      $("#submit-active").css("display","block");
+  });
+  $("#submit").bind('touchend',function(){
+      $(this).css("display","block");
+      $("#submit-active").css("display","none");
+  });
   $("#submit").click(function(){
 
       var array = new Array();
@@ -140,19 +148,11 @@
       storage.removeItem("question1");
       storage.setItem("cq",JSON.stringify(array));
 
-      $(this).css("display","none");
-      $("#submit-active").css("display","block");
-
       alert("質問を投稿したよ！");
       location.href = "result.html?cq";
   });
 
-  //back button
-  $("#back-btn").click(function(){
-      $(this).css("display","none");
-      $("#back-btn-active").css("display","inline");
-      history.back();
-  });
+
 
   </script>
 </html>

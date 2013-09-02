@@ -190,3 +190,16 @@ function insertComments(){
         $("#comment-lists").append('<div class="comment-tip box"><div class="comment-icon"><img src="../images/result/'+icon[i]+'.png" /></div><div class="comment-right"><div class="comment-select">'+username[i]+'<span style="margin-left:10px;">回答：'+selects[i]+'</span></div><div class="comment-content">'+comments[i]+'</div></div><div class="comment-sex-image"><img src="../images/result/result_'+sex[i]+'.png" /></div></div>');
     }
 }
+
+//back button
+$("#back-btn").bind('touchstart', function(){
+    $(this).css("display","none");
+    $("#back-btn-active").css("display","inline");
+});
+$("#back-btn").bind('touchend', function(){
+    $(this).css("display","inline");
+    $("#back-btn-active").css("display","none");
+});
+$("#back-btn").click(function(){
+    history.back();
+});

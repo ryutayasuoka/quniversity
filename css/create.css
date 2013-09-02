@@ -1,3 +1,8 @@
+#container
+{
+    padding-bottom:68px;
+}
+
 header #back-btn
 {
     width:50px;
@@ -19,7 +24,7 @@ header #title
 
 #textarea
 {
-    margin:28px 10px 0;
+    margin:2px 10px 0;
     width:296px;
     height:133px;
 }
@@ -36,11 +41,8 @@ textarea
 
 #selects
 {
-    margin:28px auto 0;
+    margin:12px auto 0;
     width:238px;
-    height:128px;
-    background-image:url("../images/create/create_choice.png");
-    background-size:100% 100%;
 }
 
 /* controll selects */
@@ -48,48 +50,20 @@ textarea
 {
     height:24px;
     width:216px;
-    margin-left:4px;
-    border:none;
-    border-radius:none;
-    font-size:14px;
-}
-#s1
-{
-    margin-top:4px;
-}
-#h1
-{
-    width:232px;
-    position:relative;
-    top:-103px;
-}
-#h2
-{
-    width:232px;
-    position:relative;
-    top:-83px;
-}
-#h3
-{
-    width:232px;
-    position:relative;
-    top:-62px;
+    margin:4px;
+    font-size:16px;
+    border-radius:5px;
 }
 #comment
 {
     width:238px;
-    margin:0px auto 0;
-    position:relative;
-    top:-20px;;
+    margin:8px auto 0;
 }
 
 #comment-image
 {
     width:160px;
     height:23px;
-    position:relative;
-    top:0px;
-    left:0px;
     z-index:1;
 }
 
@@ -97,17 +71,23 @@ textarea
 {
     width:34px;
     height:33px;
+    z-index:2;
     position:relative;
-    top:0px;
     left:-170px;
 }
 
+#category-image
+{
+    margin:18px 0 0 40px;
+    width:142px;
+    height:18px;
+    background-image:url("../images/create/create_categorytitle.png");
+    background-size:100% 100%;
+}
 #category
 {
     margin:14px auto 0;
     width:238px;
-    position:relative;
-    top:-20px;;
 }
 #category select
 {
@@ -123,9 +103,7 @@ textarea
     background-image:url("../images/create/create_button.png");
     background-size:100% 100%;
     position:center;
-    position:relative;
-    top:-7px;
-    margin:10px auto 0;
+    margin:36px auto 0;
 }
 #submit-active
 {
@@ -134,8 +112,6 @@ textarea
     background-image:url("../images/create/create_button_actv.png");
     background-size:100% 100%;
     position:center;
-    position:relative;
-    top:-7px;
-    margin:10px auto 0;
+    margin:36px auto 0;
     display:none;
 }

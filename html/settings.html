@@ -67,8 +67,12 @@
       $(this).css("display","none");
       $("#decide-active").css("display","block");
   });
-
   $("#decide").bind('touchend', function(){
+      $(this).css("display","block");
+      $("#decide-active").css("display","none");
+  });
+
+  $("#decide").click(function(){
 
       //set username
       key = "username";
@@ -85,19 +89,8 @@
       value = $("[name=relation]").val();
       storage.setItem(key,value);
 
-      $("#decide-active").css("display","none");
-      $(this).css("display","block");
-
       location.href = "index.html";
   });
-
-  //back button
-  $("#back-btn").click(function(){
-      $(this).css("display","none");
-      $("#back-btn-active").css("display","inline");
-      history.back();
-  });
-
 
   </script>
 </html>

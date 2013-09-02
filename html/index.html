@@ -39,6 +39,13 @@
         <div id="new-q-content">
         </div>
       </div>
+      <!-- <div id="new-q-active" class="box" > -->
+      <!--   <div id="newq-img1-active"> -->
+      <!--     <img src="../images/mypage/mypage_icon2.png" /> -->
+      <!--   </div> -->
+      <!--   <div id="new-q-content-active"> -->
+      <!--   </div> -->
+      <!-- </div> -->
 
       <div class="box">
         <div id="content-left">
@@ -92,10 +99,7 @@
         hiddenAddressbar();
         $("#username").append(storage.getItem("username"));
         $("#new-q-content").append(JSON.parse(storage.getItem("q5"))[0]);
-    });
-
-    $("#new-q").click(function(){
-        location.href = "select.html?q5";
+        $("#new-q-content-active").append(JSON.parse(storage.getItem("q5"))[0]);
     });
 
     //generate status page
@@ -139,6 +143,18 @@
     });
     $("#my-q-list").click(function(){
         location.href = "myQlist.html";
+    });
+
+    // $("#new-q").bind('touchstart',function(){
+    //     $(this).css("display","none");
+    //     $("#new-q-active").css("display","block");
+    // });
+    // $("#new-q").bind('touchend',function(){
+    //     $(this).css("display","block");
+    //     $("#new-q-active").css("display","none");
+    // });
+    $("#new-q").click(function(){
+        location.href = "select.html?q5";
     });
 
   </script>
