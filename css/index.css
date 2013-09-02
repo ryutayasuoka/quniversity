@@ -52,31 +52,12 @@ header #title
     background-size:100% 100%;
     margin:10px auto;
 }
-#new-q-active
-{
-    width:296px;
-    height:116px;
-    background-image:url("../images/mypage/mypage_newq_active.png");
-    background-size:100% 100%;
-    margin:10px auto;
-    display:none;
-}
 #newq-img1
 {
     width:45px;
     margin:25px 0 0 15px;
 }
 #newq-img1 img
-{
-    width:45px;
-    height:45px;
-}
-#newq-img1-active
-{
-    width:45px;
-    margin:25px 0 0 15px;
-}
-#newq-img1-active img
 {
     width:45px;
     height:45px;
@@ -88,13 +69,18 @@ header #title
     color:white;
     font-size:13px;
 }
-#new-q-content-active
+#newq-img2
 {
-    width:170px;
-    margin:30px 0 0 15px;
-    color:white;
-    font-size:13px;
+    width:29px;
+    height:41px;
+    margin:25px 0 0 5px;
 }
+#newq-img2 img
+{
+    width:29px;
+    height:41px;
+}
+
 #create
 {
     width:139px;
@@ -153,19 +139,19 @@ header #title
 }
 #status
 {
-    width:113px;
-    height:97px;
+    width:114px;
+    height:89px;
     position:relative;
-    top:60px;
-    left:14px;
+    top:62px;
+    left:11px;
 }
 #status-active
 {
     width:114px;
-    height:97px;
+    height:89px;
     position:relative;
-    top:60px;
-    left:14px;
+    top:62px;
+    left:11px;
     display:none;
 }
 
@@ -243,13 +229,37 @@ header #title
     top:25px;
     left:10px;
 }
-#status-heart
-{
+#heartmove{
+    left:15%;
+    position: relative;
+    width: 130px;
+    top:-243px;
+}
+#status-heart{
+  left: 0px;
     width:21px;
     height:20px;
     background-image:url("../images/statuspage/status_small_heart.png");
     background-size:100% 100%;
-    position:relative;
-    top:-243px;
-    left:140px;
+    position:absolute;
+/*    top:-243px;*/
+  top: 0px;
+  position: relative;
+/*  transition:all,5s,ease-in-out,1s;*/
+  -webkit-transition-property:left;
+  -moz-transition-property:left;
+  -o-transition-property:left;
+  transition-property:left;
+  -webkit-transition-duration:2s;
+  -moz-transition-duration:2s;
+  -o-transition-duration:2s;
+  transition-duration:2s;
+
+  -webkit-transition-timing-function:ease;
+  -moz-transition-timing-function:ease;
+  -o-transition-timing-function:ease;
+  transition-timing-function:ease;
+}#status-heart.motion{
+  left: 72%;
+/*  transform:translateX(200px);*/
 }

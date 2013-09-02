@@ -39,13 +39,6 @@
         <div id="new-q-content">
         </div>
       </div>
-      <!-- <div id="new-q-active" class="box" > -->
-      <!--   <div id="newq-img1-active"> -->
-      <!--     <img src="../images/mypage/mypage_icon2.png" /> -->
-      <!--   </div> -->
-      <!--   <div id="new-q-content-active"> -->
-      <!--   </div> -->
-      <!-- </div> -->
 
       <div class="box">
         <div id="content-left">
@@ -78,14 +71,17 @@
           <p>好感度 <span>72</span> ％</p>
         </div>
         <div id="status-girl">
+
         </div>
         <div id="status-comment">
           <div>
             先輩っていいとこあるんですね！
           </div>
         </div>
-        <div id="status-heart">
-        </div>
+        <div id="heartmove">
+          <div id="status-heart">
+        </div></div>
+
       </div>
     </div>
   </body>
@@ -99,25 +95,40 @@
         hiddenAddressbar();
         $("#username").append(storage.getItem("username"));
         $("#new-q-content").append(JSON.parse(storage.getItem("q5"))[0]);
-        $("#new-q-content-active").append(JSON.parse(storage.getItem("q5"))[0]);
+    });
+
+    $("#new-q").click(function(){
+        location.href = "select.html?q5";
     });
 
     //generate status page
     $("#status").bind('touchstart',function(){
         $(this).css("display","none");
-        $("#status-active").css("display","inline");
+        $("#status-active").css("disp lay","inline");
     });
     $("#status").bind('touchend',function(){
         $(this).css("display","inline");
         $("#status-active").css("display","none");
+        //setTimeout(function(){
+          // debugger;
+        //   if($("#status-heart").hasClass('motion')){
+        //     $("#status-heart").removeClass('motion');
+        //   } else {
+        //     $("#status-heart").addClass('motion');
+        //   }
+        // }, 100);
+
     });
     $("#status").click(function(){
         viewStatus(storage);
+        $("#status-heart").addClass('motion');
     });
 
     //remove status page
     $("#status-page").click(function(){
         removeStatus();
+        // $("#status-heart").toggleClass('motion');
+         $("#status-heart").removeClass('motion');
     });
 
     //button animation
@@ -143,18 +154,6 @@
     });
     $("#my-q-list").click(function(){
         location.href = "myQlist.html";
-    });
-
-    // $("#new-q").bind('touchstart',function(){
-    //     $(this).css("display","none");
-    //     $("#new-q-active").css("display","block");
-    // });
-    // $("#new-q").bind('touchend',function(){
-    //     $(this).css("display","block");
-    //     $("#new-q-active").css("display","none");
-    // });
-    $("#new-q").click(function(){
-        location.href = "select.html?q5";
     });
 
   </script>
