@@ -5,7 +5,7 @@ function createPieChart(data,can){
     var total = 0;
     var angle = 0;
     var totalTilt = 0;
-    var color = new Array("rgb(0,0,255)","rgb(0,255,0)","rgb(255,0,0)","rgb(255,0,255)","rgb(0,255,255)");
+    var color = new Array("rgb(214,158,194)","rgb(0,177,247)","rgb(255,241,121)","rgb(143,130,188)","rgb(180,218,189)");
     for(var i=0; i<data.length; i++){
 
         total += data[i];
@@ -13,7 +13,7 @@ function createPieChart(data,can){
 
     for(var i=0; i<data.length; i++){
         angle = 360*(data[i] / total); //dosuu method
-        drawFan(100,100,100,totalTilt,angle,color[i],color[i],can);
+        drawFan(100,100,96,totalTilt,angle,color[i],color[i],can);
         totalTilt += angle;
     }
     //generateClip(100,100,100,30,can,0);

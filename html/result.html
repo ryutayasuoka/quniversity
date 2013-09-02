@@ -13,7 +13,7 @@
 
   <body>
     <header>
-      <img id="back-btn" src="../images/create_back.png" />
+      <img id="back-btn" src="../images/header/back.png" />
       <img id="back-btn-active" src="../images/header/back_actv.png" />
       <img id="title" src="../images/result/result_title.png" />
     </header>
@@ -33,7 +33,9 @@
         <img src="../images/result/result_amark.png" />
       </div>
 
-      <canvas id="pie" height="200" width="200"></canvas>
+      <div id="canvas">
+        <canvas id="pie" height="200" width="200"></canvas>
+      </div>
 
       <div id="total">
       </div>
@@ -48,12 +50,14 @@
 
       <div class="box">
         <div>
-          <div id="niceQ">
-          </div>
-          <div id="share">
-          </div>
+          <div id="niceQ"></div>
+          <div id="niceQ-active"></div>
+          <div id="share"></div>
+          <div id="share-active"></div>
         </div>
-        <div id="girl">
+        <div>
+          <div id="human"></div>
+          <div id="human-active"></div>
         </div>
       </div>
 
@@ -105,12 +109,20 @@
         var selectNum = calcSelectsNum(data);
 
         //insert selects
-        var selectArray = new Array();
+        var color = new Array("redline","blueline","yellowline","purple","green");
+        var width = new Array("223","206","216","216","216");
+        var crownHeight = new Array("-20px","13px","42px","73px","106px");
+        var maxIndex = 0;
+        var maxValue = 0;
         for(var i=0; i<selectNum; i++){
-            $("#selects").append('<div class="box" style="margin:3px;"><div style="width:100px;">'+data[i+5]+'</div><div>'+data[i+5+selectNum]+'人</div></div>');
-            //selectArray.push(data[i+5]);
+            $("#selects").append('<div class="box" style="margin:0px;height:10px;"><div style="width:180px;">'+data[i+5]+'</div><div>'+data[i+5+selectNum]+'人</div></div><img src="../images/result/result_'+color[i]+'.png" class="line" style="width:'+width[i]+'px;" />');
+            if(maxValue < data[i+5+selectNum]){
+                maxValue = data[i+5+selectNum];
+                maxIndex = i;
+            }
         }
-
+        //controll crown position
+        $("#crown img").css("top",crownHeight[maxIndex]);
 
         //insert selects number
         var selectNumArray = new Array();
@@ -132,10 +144,27 @@
     });
 
 
-    $("#niceQ").click(function(){
-        $(this).css("background-image",'url("../images/result/result_button_niceq_actv.png")');
-        $("#girl").css("background-image",'url("../images/result/result_illustg_activ.png")');
+    $("#niceQ").bind('touchstart',function(){
+        $(this).css("display","none");
+        $("#niceQ-active").css("display","block");
     });
-
+    $("#niceQ").bind('touchend',function(){
+        $(this).css("display","block");
+        $("#niceQ-active").css("display","none");
+        $("#human").css("display","none");
+        $("#human-active").css("display","block");
+        alert("NiceQしました！！")
+    });
+    $("#share").bind('touchstart',function(){
+        $(this).css("display","none");
+        $("#share-active").css("display","block");
+    });
+    $("#share").bind('touchend',function(){
+        $(this).css("display","block");
+        $("#share-active").css("display","none");
+    });
+    $("#share").click(function(){
+        alert("このボタンでTwitterにシェアできる予定です！！");
+    });
   </script>
 </html>

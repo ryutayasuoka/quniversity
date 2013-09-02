@@ -1,17 +1,19 @@
-html
+#initial-image
 {
     width:320px;
-    overflow:hidden;
+    height:503px;
+    background-image:url("../images/login/title.png");
+    background-size:100% 100%;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:5;
 }
-body
-{
-    width:320px;
-    overflow:hidden;
-}
+
 
 #container
 {
-    padding-bottom:40px;
+    padding-bottom:70px;
 }
 
 header #title
@@ -78,9 +80,9 @@ footer
 }
 .select #relationid{
     position: relative;
-    left: 30%;
+    left: 33%;
     height: 46px;
-    width: 210px;
+    width: 158px;
 }
 select
 {
@@ -89,19 +91,20 @@ select
     font-size:20px;
     color:white;
     width:100px;
+    z-index:2;
 }
 #button{
     height: 53px;
     width: 127px;
     position:relative;
-    left:43%;
+    left:55%;
     top:20px;
 }
 #button-active{
     height: 53px;
     width: 127px;
     position:relative;
-    left:43%;
+    left:55%;
     top:20px;
     display:none;
 }
@@ -111,7 +114,7 @@ select
 }
 .gm{
     position: relative;
-    width:160px;
+    width:100px;
     top:70%;
 }
 .dpbox{
@@ -123,7 +126,7 @@ select
     position: relative;
     height:92px;
     width: 75px;
-    left: 10%;
+    left: 62%;
     top:-40px;
     visibility: hidden;
 }
@@ -131,7 +134,7 @@ select
     position: relative;
     height:92px;
     width: 80px;
-    left: -40%;
-    top:-40px;
+    left: 60%;
+    top:-137px;
     visibility: hidden;
 }

@@ -77,8 +77,8 @@
       //set username
       key = "username";
       value = $("#username").val();
-      if(!checkLength(value,5,8) ){
-          alert("ニックネームは５文字以上８文字以下で指定してください。");
+      if(!checkLength(value,1,10) ){
+          alert("ニックネームは１０文字以下で入力してね！");
           return ;
       }
       storage.setItem(key,value);

@@ -12,6 +12,7 @@
 
   <!-- start body -->
   <body>
+    <div id="initial-image"></div>
     <header>
       <img id="title" src="../images/login/login_title.png" />
     </header>
@@ -64,6 +65,7 @@
     $(document).ready(function(){
 	hiddenAddressbar();
 	resetUserStatus(storage);
+        $("#initial-image").delay(3000).fadeOut(1000);
     });
     $("#male").click(function(){
 	$(maru).css("visibility","visible");

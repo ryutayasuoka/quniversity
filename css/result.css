@@ -9,10 +9,10 @@ header #back-btn
 
 header #title
 {
-    width:136px;
+    width:137px;
     height:19px;
     position:relative;
-    top:4px;
+    top:0px;
     left:40px;
 }
 
@@ -46,11 +46,20 @@ header #title
     top:20px;
     left:30px;
 }
-
+#canvas
+{
+    width:199px;
+    height:199px;
+    background-image:url("../images/result/result_shitsumonsya.png");
+    background-size:100% 100%;
+    position:relative;
+    left:60px;
+    top:0px;
+}
 #pie
 {
     position:relative;
-    left:60px;
+    top:-1px;
 }
 
 #total
@@ -63,50 +72,87 @@ header #title
 #result
 {
     width:280px;
-    margin:10px 0 0 30px;
+    margin:10px 0 0 10px;
 }
 #selects
 {
-    width:210px;
+    width:180px;
     color:white;
+}
+.line
+{
+    height:4px;
 }
 #crown img
 {
-    width:62px;
-    height:74px;
+    width:49px;
+    height:58px;
     position:relative;
     top:10px;
-    left:0px;
+    left:50px;
 }
 #niceQ
 {
-    width:90px;
-    height:49px;
+    width:109px;
+    height:59px;
     background-image:url("../images/result/result_nq.png");
     background-size:100% 100%;
     position:relative;
-    top:30px;
-    left:100px;
+    top:20px;
+    left:50px;
 }
-#share
+#niceQ-active
 {
-    width:90px;
-    height:49px;
-    background-image:url("../images/result/result_share.png");
-    background-size:100% 100%;
-    position:relative;
-    top:30px;
-    left:35px;
-}
-#girl
-{
-    width:79px;
-    height:147px;
-    background-image:url("../images/result/result_illustg.png");
+    width:109px;
+    height:59px;
+    background-image:url("../images/result/result_nq_active.png");
     background-size:100% 100%;
     position:relative;
     top:20px;
-    left:110px;
+    left:50px;
+    display:none;
+}
+#share
+{
+    width:109px;
+    height:48px;
+    background-image:url("../images/result/result_share.png");
+    background-size:100% 100%;
+    position:relative;
+    top:40px;
+    left:45px;
+}
+#share-active
+{
+    width:109px;
+    height:48px;
+    background-image:url("../images/result/result_share_active.png");
+    background-size:100% 100%;
+    position:relative;
+    top:40px;
+    left:45px;
+    display:none;
+}
+#human
+{
+    width:113px;
+    height:150px;
+    background-image:url("../images/result/result_illustg.png");
+    background-size:100% 100%;
+    position:relative;
+    top:0px;
+    left:50px;
+}
+#human-active
+{
+    width:113px;
+    height:150px;
+    background-image:url("../images/result/result_illustg_active.png");
+    background-size:100% 100%;
+    position:relative;
+    top:0px;
+    left:50px;
+    display:none;
 }
 /* comment */
 #comment

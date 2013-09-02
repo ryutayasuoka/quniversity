@@ -86,16 +86,21 @@ textarea
 }
 #category
 {
-    margin:14px auto 0;
-    width:238px;
+    margin:14px auto 0 40px;
+    width:118px;
+    height:30px;
+    background-image:url("../images/create/create_category.png");
+    background-size:100% 100%;
 }
 #category select
 {
-    width:120px;
+    width:118px;
     height:30px;
     font-size:18px;
+    background-color:transparent;
+    color:white;
+    border:none;
 }
-
 #submit
 {
     width:105px;
