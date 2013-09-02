@@ -1,57 +1,82 @@
 #backimg{
 	background-image: url("../images/login/login_page.png");
-	position: relative;
+	position: absolute;
 	background-size: 100% 100%;
+	top: 48px;
 	height: 350px;
 	width: 307px;
 }
 #username{
-	font-size:224%;
+	font-size:150%;
 	background-color:transparent;
 	border-style:none;
 	color:white;
-	position:relative;
-	top:30px;
-	left:50px;
+	position:absolute;
+	margin: 10px;
+	padding: 10px;
+	top:5%;
+	left:11%;
 }
 .box{
-	position: relative;
-	top:100px;
+	position: absolute;
+	top:40%;
+}
+.fmbox{
+	position:absolute;
+	top: 39%;
+}
+.fmbox .male #male{
+	position:absolute;
 	left: 80px;
 }
-.box .male #male{
-	position:relative;
-/*	top:100px;
-	left: 80px;*/
+.fmbox .female #female{
+	position:absolute;
+	left: 350%;
 }
-.box .female #female{
-	position:relative;
-/*	top:100px;*/
-	left: 80px;
-}
-#button{
-	position: relative;
-	height: 50%;
-	width: 50%;
-}
-.decide{
-	position: relative;
-	top: 100;
-}
-
 #maru{
 	position: relative;
-	height: 70px;
+	height: 80px;
 	width: 62px;
 	visibility: hidden;
 }
 .select{
-	position:relative;
-	top:165px;
-	left: 10px;
+/*	background-image: url("../images/login/login_girlillust.png"),
+	url("../images/login/login_boyillust.png");
+*/	position:absolute;
+	top:300px;
+	left: 15%;
 }
 .select #relationid{
-	height: 50px;
-	width: 190px;
-
+	height: 46px;
+	width: 158px;
+}
+#button{
+	position:absolute;
+	height: 53px;
+	width: 127px;
+/*	visibility: hidden;*/
+}#button2{
+	position:absolute;
+	height: 53px;
+	width: 127px;
+	visibility: hidden;
+}
+#decide{
+	position: absolute;
+	top:85%;
+}
+.gm{
+	position: relative;
+	left:100%;
+}
+.dpbox{
+	position: relative;
+}
+#chara_female{
+	position: absolute;
+	visibility: hidden;
+}
+#chara_male{
+	position: absolute;
+	visibility: hidden;
 }

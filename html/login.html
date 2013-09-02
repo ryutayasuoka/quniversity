@@ -1,92 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" >
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
-    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=320, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<!-- css -->
+		<link rel="stylesheet" type="text/css" href="../css/quniversity.css" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
 
-    <title>Quniversity</title>
-  </head>
+		<title>Quniversity</title>
+	</head>
 
-  <body>
-    <header>
-    </header>
+<!-- start body -->
+	<body>
+		<header>
+		</header>
 
     <!-- begin container -->
-    <div id="container">
-      <div id="backimg">
-        <input type="text" id="username" size="15" placeholder="りゅーちゃん" >
-        </input>
-
-        <div class="box">
-          <div class="male">
-	    <img src="../images/everyoneQ/everyonesQ_boy_logo.png" id="male" />
-	  </div>
-          <div class="female">
-	    <img src="../images/everyoneQ/everyonesQ_girl_logo.png" id="female" />
-	  </div>
-	  <img src="../images/login/login_maru.png" id="maru" />
-        </div>
-
-        <div class="select">
-          <select name="relation" id="relationid">
-            <option value="1">後輩</option>
-            <option value="2">先輩</option>
-            <option value="3">幼馴染</option>
-          </select>
-
-          <p id="decide">
-            <img id="button" src="../images/login/login_button.png" />
-          </p>
-        </div>
-      </div>
-    </div>
+		<div id="container">
+			<div id="backimg">
+				<input type="text" id="username" size="18" placeholder="例：りゅーちゃん" ></input>
+				<div class="fmbox">
+					<div class="male">
+						<img src="../images/everyoneQ/everyonesQ_boy_logo.png" id="male"></div>
+					<div class="female">
+						<img src="../images/everyoneQ/everyonesQ_girl_logo.png" id="female"></div>
+					<img src="../images/login/login_maru.png" id="maru">
+				</div>
+ 				<div class="select">
+ 					<div class="gm">
+						<img id="chara_female" src="../images/login/login_girlillust.png">
+						<img id="chara_male" src="../images/login/login_boyillust.png">
+					</div>
+					<div class="dpbox">
+						<select name="relation" id="relationid">
+							<option value="1">後輩</option>
+							<option value="2">先輩</option>
+							<option value="3">幼馴染</option>
+						</select>
+						<p id="decide"><img id="button" src="../images/login/login_button_actv.png"><img id="button2" src="../images/login/login_button.png"></p>
+					</div>
+				</div>
+			</div>
+		</div>
     <!-- end container -->
 
-    <footer class="box">
-      <div class="footer-menu">
-        <a href="index.html">マイページ</a>
-      </div>
-      <div class="footer-menu" style="width:108px;">
-        <a href="Qlist.html">皆の質問</a>
-      </div>
-      <div class="footer-menu">
-        <a href="settings.html">設定</a>
-      </div>
-    </footer>
-
-  </body>
-
+    <!-- start footer box -->
+<!-- 		<footer>
+		</footer> -->
+    <!-- start footer box -->
+	</body>
+<!-- end body -->
   <!-- js -->
   <script type="text/javascript" src="../js/lib/jquery.js" ></script>
   <script type="text/javascript" src="../js/quniversity.js"></script>
   <script type="text/javascript">
-
     var storage = localStorage;
-
-    $(document).ready(function(){
-        resetUserStatus(storage);
-    });
-
-    $("#male").click(function(){
-    	$(maru).css("visibility","visible");
-    	$(maru).css("left","-130px");
-        storage.setItem("sex","male");
-
-    });
-    $("#female").click(function(){
-    	$(maru).css("visibility","visible");
-    	$(maru).css("left","-30px");
-        storage.setItem("sex","female");
-    });
-
-    $("#decide").click(function(){
-
-        setQuestions(storage);
-        setFirstUserStatus(storage);
-    });
-
+	$(document).ready(function(){
+		includeFooter();
+		hiddenAddessbar();
+		resetUserStatus(storage);
+	});
+	$("#male").click(function(){
+		$(maru).css("visibility","visible");
+		$(maru).css("left","80px");
+		$(chara_female).css("visibility","visible");
+		$(chara_male).css("visibility","hidden");
+		storage.setItem("sex","male");
+	});
+	$("#female").click(function(){
+		$(maru).css("visibility","visible");
+		$(maru).css("left","220px");
+		$(chara_male).css("visibility","visible");
+		$(chara_female).css("visibility","hidden");
+		storage.setItem("sex","female");
+	});
+	$("#decide").click(function(){
+	$(button).css("visibility","hidden");
+	$(button2).css("visibility","visible");
+	setQuestions(storage);
+	setFirstUserStatus(storage);
+	$(button).css("visibility","visible");
+	$(button2).css("visibility","hidden");
+	});
   </script>
 </html>
