@@ -35,9 +35,8 @@
           <option value="3">幼馴染</option>
         </select>
 
-        <div id="decide"></div>
-        <div id="decide-active"></div>
-
+        <img src="../images/setting/setting_button.png" id="decide" />
+        <img src="../images/setting/setting_button_activ.png" id="decide-active" />
       </div>
     </div>
     <!-- end container -->
@@ -64,7 +63,12 @@
       $("[name=relation]").val(storage.getItem("relation"));
   });
 
-  $("#decide").click(function(){
+  $("#decide").bind('touchstart', function(){
+      $(this).css("display","none");
+      $("#decide-active").css("display","block");
+  });
+
+  $("#decide").bind('touchend', function(){
 
       //set username
       key = "username";
@@ -81,10 +85,10 @@
       value = $("[name=relation]").val();
       storage.setItem(key,value);
 
-      $(this).css("display","none");
-      $("#decide-active").css("display","block");
+      $("#decide-active").css("display","none");
+      $(this).css("display","block");
 
-      location = "index.html";
+      location.href = "index.html";
   });
 
   //back button

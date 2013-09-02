@@ -58,7 +58,7 @@
         $("#q-content").append(q[0]);
         var selectNum = calcSelectsNum(q);
         for(var i=0; i<selectNum; i++){
-            $("#selects").append('<div><a href="result.html?'+getRequest()+'">'+q[i+5]+'</a></div>');
+            $("#selects").append('<div><a href="result.html?'+getRequest()+'"><div>'+q[i+5]+'</div></a></div>');
         }
     });
 

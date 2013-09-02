@@ -40,46 +40,33 @@ header #title
 
 #selects
 {
-    margin:28px auto 0;
+    margin:10px auto 0;
     width:230px;
-    height:auto;
+    height:230px;
     padding:4px;
 }
 
 /* controll selects */
-#selects div
+#selects div a div
 {
-    height:20px;
+    height:38px;
     width:230px;
     border-radius:5px;
     background-color:white;
-    line-height:20px;
+    line-height:38px;
     vertical-align:middle;
-    font-size:16px;
+    font-size:18px;
     padding-left:3px;
     margin:5px auto;
-    color:white;
+    color:black;
     text-align:center;
 }
 
-#submit
-{
-    width:102px;
-    height:34px;
-    background-image:url("../images/answer/answer_button.png");
-    background-size:100% 100%;
-    position:center;
-    position:relative;
-    top:0px;
-    margin:1px auto 0;
-}
 #human-image
 {
-    width:260px;
-    height:101px;
+    width:219px;
+    height:88px;
     background-image:url("../images/answer/answer_illustgirl.png");
     background-size:100% 100%;
-    position:absolute;
-    top:359px;
-    left:32px;
+    margin:0 auto;
 }

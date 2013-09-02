@@ -42,16 +42,10 @@
 
       <div class="box">
         <div id="content-left">
-          <div id="create">
-            <a href="create.html" >
-              <img src="../images/mypage/mypage_qbutton.png" />
-            </a>
-          </div>
-          <div id="my-q-list">
-            <a href="myQlist.html">
-              <img src="../images/mypage/mypage_imamadeno.png" />
-            </a>
-          </div>
+          <div id="create"></div>
+          <div id="create-active"></div>
+          <div id="my-q-list"></div>
+          <div id="my-q-list-active"></div>
           <div id="kokuban">
             <img src="../images/mypage/mypage_kokuban.png" />
           </div>
@@ -59,6 +53,7 @@
 
         <div id="content-right">
           <img src="../images/mypage/mypage_status.png" id="status" />
+          <img src="../images/mypage/mypage_status_active.png" id="status-active" />
         </div>
       </div>
     </div>
@@ -98,11 +93,20 @@
         $("#username").append(storage.getItem("username"));
         $("#new-q-content").append(JSON.parse(storage.getItem("q5"))[0]);
     });
+
     $("#new-q").click(function(){
         location.href = "select.html?q5";
     });
 
     //generate status page
+    $("#status").bind('touchstart',function(){
+        $(this).css("display","none");
+        $("#status-active").css("display","inline");
+    });
+    $("#status").bind('touchend',function(){
+        $(this).css("display","inline");
+        $("#status-active").css("display","none");
+    });
     $("#status").click(function(){
         viewStatus(storage);
     });
@@ -110,6 +114,31 @@
     //remove status page
     $("#status-page").click(function(){
         removeStatus();
+    });
+
+    //button animation
+    $("#create").bind('touchstart',function(){
+        $(this).css("display","none");
+        $("#create-active").css("display","block");
+    });
+    $("#create").bind('touchend',function(){
+        $(this).css("display","block");
+        $("#create-active").css("display","none");
+    });
+    $("#create").click(function(){
+        location.href = "create.html";
+    });
+
+    $("#my-q-list").bind('touchstart',function(){
+        $(this).css("display","none");
+        $("#my-q-list-active").css("display","block");
+    });
+    $("#my-q-list").bind('touchend',function(){
+        $(this).css("display","block");
+        $("#my-q-list-active").css("display","none");
+    });
+    $("#my-q-list").click(function(){
+        location.href = "myQlist.html";
     });
 
   </script>

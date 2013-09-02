@@ -63,16 +63,12 @@ select
 {
     width:127px;
     height:56px;
-    background-image:url("../images/setting/setting_button.png");
-    background-size:100% 100%;
-    margin:150px auto 0;
+    margin:150px 0 0 60px;
 }
 #decide-active
 {
     width:127px;
     height:56px;
-    background-image:url("../images/setting/setting_button_activ.png");
-    background-size:100% 100%;
-    margin:150px auto 0;
+    margin:150px 0 0 60px;
     display:none;
 }
