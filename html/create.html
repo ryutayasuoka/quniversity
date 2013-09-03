@@ -12,7 +12,7 @@
   </head>
 
   <body>
-
+    <div class="alert-message" id="alert1"></div>
     <header>
       <img id="back-btn" src="../images/header/back.png" />
       <img id="back-btn-active" src="../images/header/back_actv.png" />
@@ -153,11 +153,11 @@
       storage.removeItem("question1");
       storage.setItem("cq",JSON.stringify(array));
 
-      alert("質問を投稿したよ！");
+      //alert("質問を投稿したよ！");
+      $("#alert1").css("display","block");
+      $("#alert1").delay(1000).fadeOut(1000);
       location.href = "result.html?cq";
   });
-
-
 
   </script>
 </html>

@@ -71,3 +71,21 @@ header #title
     background-size:100% 100%;
     margin:0 auto;
 }
+
+/* alert */
+.alert-message
+{
+    width:238px;
+    height:128px;
+    background-size: 100% 100%;
+    z-index:2;
+    display:none;
+}
+
+#alert1
+{
+    background-image:url("../images/alert/alert_answered.png");
+    position:fixed;
+    top:200px;
+    left:30px;
+}

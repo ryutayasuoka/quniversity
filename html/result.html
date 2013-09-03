@@ -12,6 +12,8 @@
   </head>
 
   <body>
+    <div id="alert1" class="alert-message"></div>
+
     <header>
       <img id="back-btn" src="../images/header/back.png" />
       <img id="back-btn-active" src="../images/header/back_actv.png" />
@@ -265,6 +267,9 @@
             return ;
         }
         submitComment($("[name=comment1]").val(), storage);
+        $("#alert1").css("display","block");
+        $("#alert1").delay(1000).fadeOut(1000);
+
     });
     $("#submit2").bind('touchstart',function(){
         $(this).css("display","none");
@@ -280,6 +285,8 @@
             return ;
         }
         submitComment($("[name=comment2]").val(), storage);
+        $("#alert1").css("display","block");
+        $("#alert1").delay(1000).fadeOut(1000);
     });
 
     $("#share").bind('touchstart',function(){

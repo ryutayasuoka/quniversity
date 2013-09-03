@@ -12,7 +12,7 @@
   </head>
 
   <body>
-
+    <div id="alert1" class="alert-message"></div>
     <header>
       <img id="back-btn" src="../images/header/back.png" />
       <img id="back-btn-active" src="../images/header/back_actv.png" />
@@ -70,8 +70,13 @@
         $("#q-content").append(q[0]);
         var selectNum = calcSelectsNum(q);
         for(var i=0; i<selectNum; i++){
-            $("#selects").append('<div><a href="result.html?'+getRequest()+'"><div>'+q[i+5]+'</div></a></div>');
+            $("#selects").append('<div class="alert-m"><a href="result.html?'+getRequest()+'"><div>'+q[i+5]+'</div></a></div>');
         }
+    });
+
+    $(".alert-m").click(function(){
+        $("#alert1").css("display","block");
+        $("#alert1").fadeOut(1000);
     });
 
 
