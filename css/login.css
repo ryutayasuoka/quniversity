@@ -7,7 +7,7 @@
     position:absolute;
     left:0;
     top:0;
-    z-index:5;
+    z-index:20;
 }
 
 
@@ -137,4 +137,82 @@ select
     left: 60%;
     top:-137px;
     visibility: hidden;
+}
+
+#tutorial1
+{
+    width:320px;
+    height:504px;
+    background-image:url("../images/tutorial/tutorial_1.png");
+    background-size:100% 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+}
+#tutorial2
+{
+    width:320px;
+    height:504px;
+    background-image:url("../images/tutorial/tutorial_2.png");
+    background-size:100% 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:9;
+}
+#tutorial3
+{
+    width:320px;
+    height:504px;
+    background-image:url("../images/tutorial/tutorial_3.png");
+    background-size:100% 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+#tutorial4
+{
+    width:320px;
+    height:504px;
+    background-image:url("../images/tutorial/tutorial_4.gif");
+    background-size:100% 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:7;
+}
+#tutorial5
+{
+    width:320px;
+    height:504px;
+    background-image:url("../images/tutorial/tutorial_5.gif");
+    background-size:100% 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:6;
+}
+#tutorial6
+{
+    width:320px;
+    height:504px;
+    background-image:url("../images/tutorial/tutorial_6.png");
+    background-size:100% 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:5;
+}
+#tutorial7
+{
+    width:320px;
+    height:504px;
+    background-image:url("../images/tutorial/tutorial_last.png");
+    background-size:100% 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:4;
 }

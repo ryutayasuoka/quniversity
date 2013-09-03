@@ -13,6 +13,13 @@
   <!-- start body -->
   <body>
     <div id="initial-image"></div>
+    <div id="tutorial1"></div>
+    <div id="tutorial2"></div>
+    <div id="tutorial3"></div>
+    <div id="tutorial4"></div>
+    <div id="tutorial5"></div>
+    <div id="tutorial6"></div>
+    <div id="tutorial7"></div>
     <header>
       <img id="title" src="../images/login/login_title.png" />
     </header>
@@ -65,7 +72,7 @@
     $(document).ready(function(){
 	hiddenAddressbar();
 	resetUserStatus(storage);
-        $("#initial-image").delay(1500).fadeOut(1000);
+        $("#initial-image").delay(1500).fadeOut(2500);
     });
     $("#male").click(function(){
 	$(maru).css("visibility","visible");
@@ -81,11 +88,12 @@
 	$(chara_female).css("visibility","hidden");
 	storage.setItem("sex","female");
     });
-    $('#decide').bind('touchstart', function() {
+
+    $("#decide").bind('touchstart', function() {
         $("#button").css("display","none");
         $("#button-active").css("display","inline");
     });
-    $('#decide').bind('touchend', function() {
+    $("#decide").bind('touchend', function() {
         $("#button").css("display","inline");
         $("#button-active").css("display","none");
     });
@@ -93,6 +101,31 @@
 	setQuestions(storage);
 	setFirstUserStatus(storage);
     });
+
+
+    //tutorial
+    $("#tutorial1").click(function(){
+        $(this).fadeOut(500);
+    });
+    $("#tutorial2").click(function(){
+        $(this).fadeOut(500);
+    });
+    $("#tutorial3").click(function(){
+        $(this).fadeOut(500);
+    });
+    $("#tutorial4").click(function(){
+        $(this).fadeOut(500);
+    });
+    $("#tutorial5").click(function(){
+        $(this).fadeOut(500);
+    });
+    $("#tutorial6").click(function(){
+        $(this).fadeOut(500);
+    });
+    $("#tutorial7").click(function(){
+        $(this).fadeOut(500);
+    });
+
 
   </script>
 </html>

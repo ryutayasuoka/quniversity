@@ -54,6 +54,18 @@
         includeFooter();
         hiddenAddressbar();
 
+        //select design
+        if(storage.getItem("sex") == "female"){
+            $("#question").css("background-image",'url("../images/answer/answer_qbox.png")');
+            $("#human-image").css("background-image",'url("../images/answer/answer_illustboy.png")');
+        }
+        $("#question").css("display","block");
+        $("#human-image").css("display","block");
+
+
+        $("#username").append(storage.getItem("username"));
+        $("#new-q-content").append(JSON.parse(storage.getItem("q5"))[0]);
+
         var q = JSON.parse(storage.getItem(getRequest()));
         $("#q-content").append(q[0]);
         var selectNum = calcSelectsNum(q);

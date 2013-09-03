@@ -58,6 +58,12 @@
       includeFooter();
       hiddenAddressbar();
 
+      //select design
+      if(storage.getItem("sex") == "female"){
+          $("#setting-background").css("background-image",'url("../images/setting/setting_page_boy.png")');
+      }
+      $("#setting-background").css("display","block");
+
       //既にある値を格納
       $("#username").val(storage.getItem("username"));
       $("[name=relation]").val(storage.getItem("relation"));

@@ -92,6 +92,20 @@
     $(document).ready(function(){
         includeFooter();
         hiddenAddressbar();
+        //select design
+        if(storage.getItem("sex") == "female"){
+            $("#new-q").css("background-image",'url("../images/mypage/mypage_newq_boy.png")');
+            $("#status-girl").css("background-image",'url("../images/statuspage/status_boy.png")');
+            $("#content-right").css("background-image",'url("../images/mypage/mypage_boy.png")');
+            $("#status").css("left","10px");
+            $("#status-active").css("left","10px");
+            $("#status").css("top","68px");
+            $("#status-active").css("top","68px");
+        }
+        $("#new-q").css("display","-webkit-box");
+        $("#content-right").css("display","block");
+
+
         $("#username").append(storage.getItem("username"));
         $("#new-q-content").append(JSON.parse(storage.getItem("q5"))[0]);
     });

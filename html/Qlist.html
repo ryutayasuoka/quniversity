@@ -27,7 +27,7 @@
         <div id="username">
         </div>
         <div id="sex-image">
-          <img src="../images/everyoneQ/everyonesQ_boy_logo.png" />
+          <img src="../images/everyoneQ/everyonesQ_boy_logo.png" id="sex-image-src" />
         </div>
       </div>
 
@@ -71,7 +71,19 @@
 
     $(document).ready(function(){
         includeFooter();
+        hiddenAddressbar();
+
+        //select design
+        if(storage.getItem("sex") == "female"){
+            $("#sex-image-src").attr("src","../images/everyoneQ/everyonesQ_girl_logo.png");
+            $("#human-image").css("background-image",'url("../images/answer/answer_illustboy.png")');
+        }
+        $("#sex-image-src").css("display","inline");
+        $("#human-image").css("display","block");
+
+
         $("#username").append(storage.getItem("username"));
+
         insertQuestions(storage);
     });
 

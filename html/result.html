@@ -86,8 +86,9 @@
           <div id="submit2-active" class="submit-active" ></div>
         </div>
 
-        <div id="comment-bar-bottom">
-        </div>
+      </div>
+
+      <div id="comment-bar-bottom">
       </div>
 
       <div id="go-to-everyq">
@@ -130,6 +131,16 @@
     $(document).ready(function(){
         includeFooter();
         hiddenAddressbar();
+
+        //select design
+        if(storage.getItem("sex") == "female"){
+            $("#human").css("background-image",'url("../images/result/result_illustboy.png")');
+            $("#human-active").css("background-image",'url("../images/result/result_illustboy_activ.png")');
+        }
+        $("#human").css("display","block");
+        $("#human-image").css("display","block");
+
+
 
         var questionId = getRequest();
 

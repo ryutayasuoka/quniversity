@@ -52,7 +52,7 @@ function setFirstUserStatus(storage){
 
     //set username
     key = "username";
-    value = $("#username").val();
+    value = $.trim($("#username").val());
     if(!checkLength(value,1,10) ){
         alert("ニックネームは1文字以上１０文字以下で指定してね！");
         return ;
@@ -149,12 +149,21 @@ function insertQuestions(storage){
 
         var _data = JSON.parse(storage.getItem( "q"+(i+1) ) );
 
-        if(sex == _data[1]){
-            qlist.append('<div class="list-tip"><a href="result.html?q'+(i+1)+'"><div><div class="box"><div class="list-icon"><img src="../images/result/'+iconname[i]+'.png" /></div><div class="list-content box"><div><div class="q-username">'+username[i]+'</div><div class="q-content">'+_data[0]+'</div><div class="q-answer">集計結果を見る</div></div><div class="sex-image"><img src="../images/everyoneQ/everyonesQ_boy_logo.png" /></div></div></div></div></a></div>');
-        }else{
-            qlist.append('<div class="list-tip"><a href="select.html?q'+(i+1)+'"><div><div class="box"><div class="list-icon"><img src="../images/result/'+iconname[i]+'.png" /></div><div class="list-content box"><div><div class="q-username">'+username[i]+'</div><div class="q-content">'+_data[0]+'</div><div class="q-answer">回答する</div></div><div class="sex-image"><img src="../images/everyoneQ/everyonesQ_girl_logo.png" /></div></div></div></div></a></div>');
-        }
+        if(sex == "male"){
 
+            if(sex == _data[1]){
+                qlist.append('<div class="list-tip"><a href="result.html?q'+(i+1)+'"><div><div class="box"><div class="list-icon"><img src="../images/result/'+iconname[i]+'.png" /></div><div class="list-content box"><div><div class="q-username">'+username[i]+'</div><div class="q-content">'+_data[0]+'</div><div class="q-answer">集計結果を見る</div></div><div class="sex-image"><img src="../images/everyoneQ/everyonesQ_boy_logo.png" /></div></div></div></div></a></div>');
+            }else{
+                qlist.append('<div class="list-tip"><a href="select.html?q'+(i+1)+'"><div><div class="box"><div class="list-icon"><img src="../images/result/'+iconname[i]+'.png" /></div><div class="list-content box"><div><div class="q-username">'+username[i]+'</div><div class="q-content">'+_data[0]+'</div><div class="q-answer">回答する</div></div><div class="sex-image"><img src="../images/everyoneQ/everyonesQ_girl_logo.png" /></div></div></div></div></a></div>');
+            }
+        }else{
+
+            if(sex == _data[1]){
+                qlist.append('<div class="list-tip"><a href="result.html?q'+(i+1)+'"><div><div class="box"><div class="list-icon"><img src="../images/result/'+iconname[i]+'.png" /></div><div class="list-content box"><div><div class="q-username">'+username[i]+'</div><div class="q-content">'+_data[0]+'</div><div class="q-answer">集計結果を見る</div></div><div class="sex-image"><img src="../images/everyoneQ/everyonesQ_girl_logo.png" /></div></div></div></div></a></div>');
+            }else{
+                qlist.append('<div class="list-tip"><a href="select.html?q'+(i+1)+'"><div><div class="box"><div class="list-icon"><img src="../images/result/'+iconname[i]+'.png" /></div><div class="list-content box"><div><div class="q-username">'+username[i]+'</div><div class="q-content">'+_data[0]+'</div><div class="q-answer">回答する</div></div><div class="sex-image"><img src="../images/everyoneQ/everyonesQ_boy_logo.png" /></div></div></div></div></a></div>');
+            }
+        }
     }
 
     return;

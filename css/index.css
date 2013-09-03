@@ -57,6 +57,7 @@ header #title
     background-image:url("../images/mypage/mypage_newq.png");
     background-size:100% 100%;
     margin:10px auto;
+    display:none;
 }
 #newq-img1
 {
@@ -142,6 +143,7 @@ header #title
     background-image:url("../images/mypage/mypage_girl.png");
     background-size:100% 100%;
     margin:-22px 0 0 10px;
+    display:none;
 }
 #status
 {
