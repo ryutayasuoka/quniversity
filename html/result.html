@@ -59,6 +59,7 @@
         </div>
         <div>
           <div id="human"></div>
+          <div id="pop"></div>
           <div id="human-active"></div>
         </div>
       </div>
@@ -251,8 +252,17 @@
         // $(this).css("display","block");
         // $("#niceQ-active").css("display","none");
         $("#human").css("display","none");
+        $("#human").css("display","none");
+        $("#pop").addClass('popup');
+          setTimeout("removeClass()",1000);
+          setTimeout("addPic()",1000);
+      });
+      function removeClass(){
+          $("#pop").removeClass('popup');
+          $("#pop").css("display","none");
+      }function addPic() {
         $("#human-active").css("display","block");
-    });
+      }
     $("#submit1").bind('touchstart',function(){
         $(this).css("display","none");
         $("#submit1-active").css("display","block");
