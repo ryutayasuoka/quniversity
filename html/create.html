@@ -153,9 +153,7 @@
       storage.removeItem("question1");
       storage.setItem("cq",JSON.stringify(array));
 
-      //alert("質問を投稿したよ！");
-      $("#alert1").css("display","block");
-      $("#alert1").delay(1000).fadeOut(1000);
+      alert("質問を投稿したよ！");
       location.href = "result.html?cq";
   });
 

@@ -121,16 +121,12 @@ function viewStorage(){
 /* set some example questions*/
 function setQuestions(storage){
 
-    var Q1 = new Array("野球部とサッカー部どちらが好きですか？","male","4","no",10,"はい","いいえ","その他",33,45,10);
+    var Q1 = new Array("野球部とサッカー部どっちがすき？","male","4","no",10,"野球部","サッカー部","その他",50,43,18);
+    //var Q1 = new Array("好きでもない女の子とはどこまやってもOKなの？","female","4","no",10,"お食事","バー","おててつないでおでかけ","キス",10,23,45,108);
     var Q2 = new Array("キュロットスカートって男子からしたらどうなんですか？","female","3","no",30,"許せない","がっかり","逆にそそる","その他",300,100,35,6);
     var Q3 = new Array("女の子って何でお互いを「可愛い」ってゆうの？","female","5","yes",45,"可愛いと思ってない","ホントに思ってる","その他",67,23,19);
     var Q4 = new Array("俺、女の子と２人きりの時沈黙が好きなんだけど、女の子もそうかなあ？","male","4","yes",5,"はい","いいえ","論外","その他",3,30,68,2);
-    var Q5 = new Array("どこからが浮気ですか？","male","5","yes",89,"食事","バー","キス","YesComeon!","その他",3,10,56,32,5);
-    var Q6 = new Array("野球部とサッカー部どちらが好きですか？","male","4","no",10,"はい","いいえ","その他",33,45,10);
-    var Q7 = new Array("キュロットスカートって男子からしたらどうなんですか？","female","3","no",30,"許せない","がっかり","逆にそそる","その他",300,100,35,6);
-    var Q8 = new Array("女の子って何でお互いを「可愛い」ってゆうの？","female","5","yes",45,"可愛いと思ってない","ホントに思ってる","その他",67,23,19);
-    var Q9 = new Array("俺、女の子と２人きりの時沈黙が好きなんだけど、女の子もそうかなあ？","male","4","yes",5,"はい","いいえ","論外","その他",3,30,68,2);
-    var Q10 = new Array("どこからが浮気ですか？","male","5","yes",89,"食事","バー","キス","YesComeon!","その他",3,10,56,32,5);
+    var Q5 = new Array("どこからが浮気ですか？","male","5","yes",89,"食事","バー","キス","ベッドの上で・・・","その他",3,10,56,32,5);
 
     storage.setItem("q1",JSON.stringify(Q1));
     storage.setItem("q2",JSON.stringify(Q2));
@@ -174,6 +170,7 @@ function insertQuestions(storage){
     return;
 }
 
+
 function calcSelectsNum(data){
     switch(data.length){
     case 9:
@@ -196,7 +193,7 @@ function insertComments(){
 
     var comments = new Array("断然野球部でしょ！","私も野球部！","サッカー一択","サッカー部のマネやってました！","難しいなー","人によるよねーー");
     var sex = new Array("boy","girl","boy","girl","girl","girl");
-    var selects = new Array("①","①！","②","②","③","③");
+    var selects = new Array("①","①","②","②","③","③");
     var icon = new Array("peanuts","hiyoko","peanuts","hiyoko","hiyoko","hiyoko");
     var username = new Array("だいふく","おーつき","りゅーちゃん","たけもと","いたじき","なかむら");
 

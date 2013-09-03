@@ -138,6 +138,7 @@
         //select design
         if(storage.getItem("sex") == "female"){
             $("#human").css("background-image",'url("../images/result/result_illustboy.png")');
+            $("#pop").css("background-image",'url("../images/result/result_illustboy_popup.png")');
             $("#human-active").css("background-image",'url("../images/result/result_illustboy_activ.png")');
         }
         $("#human").css("display","block");
@@ -249,8 +250,6 @@
         $("#niceQ-active").css("display","block");
     });
     $("#niceQ").bind('touchend',function(){
-        // $(this).css("display","block");
-        // $("#niceQ-active").css("display","none");
         $("#human").css("display","none");
         $("#human").css("display","none");
         $("#pop").addClass('popup');
