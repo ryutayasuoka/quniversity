@@ -63,32 +63,37 @@
 
 
       <!---------- begin comments ---------->
-
-      <div class="comment box">
-        <div>
-          <input type="text" name="comment1" placeholder="コメントする"></input>
+      <div id="comment-background">
+        <div class="comment box">
+          <div>
+            <input type="text" name="comment1" placeholder="コメントする"></input>
+          </div>
+          <div id="submit1" class="submit" ></div>
+          <div id="submit1-active" class="submit-active" ></div>
         </div>
-        <div id="submit1" class="submit" ></div>
-        <div id="submit1-active" class="submit-active" ></div>
-      </div>
 
-      <div id="comment-bar">
-      </div>
-
-      <div id="comment-lists">
-      </div>
-
-      <div class="comment box">
-        <div>
-          <input type="text" name="comment2" placeholder="コメントする"></input>
+        <div id="comment-bar">
         </div>
-        <div id="submit2" class="submit" ></div>
-        <div id="submit2-active" class="submit-active" ></div>
+
+        <div id="comment-lists">
+        </div>
+
+        <div class="comment box">
+          <div>
+            <input type="text" name="comment2" placeholder="コメントする"></input>
+          </div>
+          <div id="submit2" class="submit" ></div>
+          <div id="submit2-active" class="submit-active" ></div>
+        </div>
+
+        <div id="comment-bar-bottom">
+        </div>
       </div>
 
-      <div id="comment-bar-bottom">
+      <div id="go-to-everyq">
       </div>
-
+      <div id="go-to-everyq-active">
+      </div>
 
       <footer>
       </footer>
@@ -104,12 +109,29 @@
   <script type="text/javascript">
     var storage = localStorage;
 
+    //important save() and restore().
+    //generate canvas 2d object.
+    var can = $("#pie")[0].getContext("2d");
+    can.beginPath();
+
+    var total = 0;
+    var angle = 0;
+    var totalTilt = 0;
+    var pieColor = new Array("rgb(214,158,194)","rgb(0,177,247)","rgb(255,241,121)","rgb(143,130,188)","rgb(180,218,189)");
+    var x = 100;
+    var y = 100;
+    var r = 96;
+    var count = 0;
+    var stepAngle = 0;
+    var totalFrame = 100;
+    var id;
+
+
     $(document).ready(function(){
         includeFooter();
         hiddenAddressbar();
 
         var questionId = getRequest();
-
 
         //data = [content,sex,category,commentBool,selects,selectsCount,niceq]
         var data = JSON.parse(storage.getItem(questionId));
@@ -146,19 +168,67 @@
             selectNumArray.push(data[i+5+selectNum]);
         }
 
+        /* create pie chart */
 
-        //generate canvas 2d object.
-        var can = $("#pie")[0].getContext("2d");
-        can.beginPath();
-        var total = createPieChart(selectNumArray,can);
+        for(var i=0; i<selectNumArray.length; i++){
+            total += selectNumArray[i];
+        }
+
+        //draw pie chart
+        for(var i=0; i<selectNumArray.length; i++){
+            angle = 360*(selectNumArray[i] / total);
+            drawFan(x,y,r,totalTilt,angle,pieColor[i],pieColor[i],can);
+            totalTilt += angle;
+        }
+
+        //animation
+        id = setInterval(anim(),10);
 
         $("#total").append(total+"人中");
 
         //insert comment
-        insertComments();
+        if(data[3] == "yes"){
+            insertComments();
+        }else{
+            $("#comment-background").css("display","none");
+        }
 
     });
-    //
+
+    //animation
+    function anim(){
+        can.save(); //save
+
+        stepAngle = count / totalFrame;
+        can.beginPath();
+        can.moveTo(x,y);
+        can.arc(x,y,r,
+                -(90 * Math.PI / 180),
+                -( (90- stepAngle) * Math.PI / 180),
+                false
+               );
+        //can.lineTo(x,y);
+        can.closePath(x,y);
+
+        can.clip();
+
+        can.clearRect(0, 0, 200, 200);
+        can.arc(x, y, r,
+                -((90) * Math.PI / 180),
+                -(10 * Math.PI / 180),
+                false
+               ); //draw fan
+        can.fill();
+        can.restore();
+        if (count === totalFrame) {
+            alert("終了");
+            clearInterval(id);
+            return;
+        }
+        count++;
+    }
+
+
     //button animation
     $("#niceQ").bind('touchstart',function(){
         $(this).css("display","none");
@@ -211,6 +281,18 @@
     });
     $("#share").click(function(){
         alert("このボタンでTwitterにシェアできる予定です！！");
+    });
+
+    $("#go-to-everyq").bind('touchstart',function(){
+        $(this).css("display","none");
+        $("#go-to-everyq-active").css("display","block");
+    });
+    $("#go-to-everyq").bind('touchend',function(){
+        $(this).css("display","block");
+        $("#go-to-everyq-active").css("display","none");
+    });
+    $("#go-to-everyq").click(function(){
+        location.href = "Qlist.html";
     });
 
   </script>

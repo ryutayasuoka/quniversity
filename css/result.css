@@ -1,3 +1,8 @@
+#container
+{
+    padding-bottom:10px;
+}
+
 header #back-btn
 {
     width:50px;
@@ -244,7 +249,29 @@ header #title
 {
     width:320px;
     height:6px;
-    background-image:url("../images/result/result_cundeline.png");
+    background-image:url("../images/result/result_underline.png");
     background-size:100% 100%;
     margin:10px 0px;
+}
+
+#go-to-everyq
+{
+    width:126px;
+    height:35px;
+    background-image:url("../images/result/result_link.png");
+    background-size:100% 100%;
+    position:relative;
+    top:0px;
+    left:175px;
+}
+#go-to-everyq-active
+{
+    width:126px;
+    height:35px;
+    background-image:url("../images/result/result_link_active.png");
+    background-size:100% 100%;
+    position:relative;
+    top:0px;
+    left:175px;
+    display:none;
 }

@@ -26,9 +26,8 @@
           <img src="../images/mypage/mypage_icon1.png" /><span id="username"></span>
         </div>
         <div id="settings">
-          <a href="settings.html">
-            <img src="../images/mypage/mypage_settei.png" />
-          </a>
+          <img src="../images/mypage/mypage_settei.png" id="set1" />
+          <img src="../images/mypage/mypage_settei_active.png" id="set1-active" />
         </div>
       </div>
 
@@ -145,6 +144,18 @@
     });
     $("#my-q-list").click(function(){
         location.href = "myQlist.html";
+    });
+
+    $("#set1").bind('touchstart',function(){
+        $(this).css("display","none");
+        $("#set1-active").css("display","inline");
+    });
+    $("#set1").bind('touchend',function(){
+        $(this).css("display","inline");
+        $("#set1-active").css("display","none");
+    });
+    $("#set1").click(function(){
+        location.href = "settings.html";
     });
 
   </script>
