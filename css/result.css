@@ -275,3 +275,23 @@ header #title
     left:175px;
     display:none;
 }
+#pop{
+  width: 113px;
+  height: 150px;
+  background-size: 100% 100%;
+  background-image: url("../images/result/result_illustg_popup.png");
+  position: relative;
+  left: 40%;
+  display: none;
+  transition: all 0.9s;
+  -webkit-transition:all 0.9s;
+  -moz-transition:all 0.9s;
+  transition-delay:0.8s;
+  -webkit-transition-delay:0.8s;
+  -moz-transition-delay:0.8s;
+}#pop.popup{
+  display: block;
+  transform: scale(1.2) rotate(5deg);
+  -moz-transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(5deg);
+}
